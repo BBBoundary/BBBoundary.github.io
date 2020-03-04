@@ -8,8 +8,6 @@ header-img: img/upd_img6.png
 catalog: true
 tags:
     - iOS
-    - 开发技巧
-    - Debug
 ---
 
 
