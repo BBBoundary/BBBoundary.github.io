@@ -4,7 +4,7 @@ title:      【转】Xcode Debug 大全
 subtitle:   iOS开发中利用 Xcode 各种调试Bug方法
 date:       2016-10-18
 author:     BY
-header-img: img/upd_img6.png
+header-img: img/upd_img7.png
 catalog: true
 tags:
     - iOS
