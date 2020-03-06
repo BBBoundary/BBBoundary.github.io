@@ -7,9 +7,7 @@ author:    Culaccino					# 作者
 header-img: img/upd_img7.PNG        #这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签
-    - CV
-    - paper reading
-	- Visual Caption
+
 ---
 
 
