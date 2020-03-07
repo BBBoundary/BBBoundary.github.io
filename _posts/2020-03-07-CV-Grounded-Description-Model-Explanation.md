@@ -114,7 +114,7 @@ $$
 
 对于第t+1步需要生成的单词$s_{t+1}$，我们希望能够在原视频帧中定位它。此处假设$s_{t+1}$分类到了第j类，则我们需要用第t步时得到的分类相似矩阵$M_s^t(R)$和其对应的分类判定矩阵$\gamma^t$对$s_{t+1}$是否定位成功进行loss估计：
 $$
-L_{grd}=-\sum_{i=1}^N\gamma_i^tlogM_s^t[j,:]
+L_{grd}=-\sum_{i=1}^N\gamma_i^tlogM_s^t[j,i]
 $$
 最终的$L_{grd}$也是需要对所有visual-grounded words进行求平均。
 
