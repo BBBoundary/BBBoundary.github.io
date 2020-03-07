@@ -41,7 +41,7 @@ tags:								#标签
 
 ##  Dataset
 
-**”ActivityNet-Entities Dataset“**
+**"ActivityNet-Entities Dataset"**
 
 视频描述领域不像在图片描述领域有Flickr30k-Entities那样大范围的数据集，而数据集ActivityNet Captions仅包含了对20k视频的注释但缺乏框定目标的注释（grounding annotations），故作者在ActivityNet Captions的基础上新增了15k个视频以及158k个带注释边框，建立了ActivityNet-Entities数据集。
 
