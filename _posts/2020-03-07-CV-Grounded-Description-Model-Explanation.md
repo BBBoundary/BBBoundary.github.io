@@ -71,13 +71,13 @@ $$
 
 **-Grounding Module-**
 
-grounding module为region attention的前置模块，其将区域特征信息加工，使其富有类别信息和时空信息，并将作为新的区域特征输入至region attention中。令原始区域特征为R $\in R^{d*N}$，区域分类相似矩阵为$M_s(R)$，时空信息嵌入矩阵为$M_l$，则最终得到的新区域特征矩阵为$\hat R=W_g[R|M_s(R)|M_l]$,（p.s. [·|·]代表矩阵连接），作者将其命名为”the grounding-aware region encoding“。
+grounding module为region attention的前置模块，其将区域特征信息加工，使其富有类别信息和时空信息，并将作为新的区域特征输入至region attention中。令原始区域特征为R $\in R^{d\*N}$，区域分类相似矩阵为$M_s(R)$，时空信息嵌入矩阵为$M_l$，则最终得到的新区域特征矩阵为$\hat R=W_g[R|M_s(R)|M_l]$,（p.s. [·|·]代表矩阵连接），作者将其命名为”the grounding-aware region encoding“。
 
 ①区域分类相似矩阵$M_s(R)$
 
 定义一个对象类别标签${c_1,c_2,……c_k}$，其中k为类别总数。grounding module会评估每个区域从属的类别的概率分布：
 
-定义一个对象分类矩阵$W_c=[w_1,w_2,……w_k]\ \inR^{d*k}$,以及偏移项$B=[b_1,b_2……b_k]\ \in R^{d*k}$, 则对于原始区域特征矩阵R(embedding结果)，可以定义区域分类相似矩阵：
+定义一个对象分类矩阵$W_c=[w_1,w_2,……w_k]\ \inR^{d\*k}$,以及偏移项$B=[b_1,b_2……b_k]\ \in R^{d\*k}$, 则对于原始区域特征矩阵R(embedding结果)，可以定义区域分类相似矩阵：
 $$
 M_s(R)=softmax(W_c^TR+B)
 $$
