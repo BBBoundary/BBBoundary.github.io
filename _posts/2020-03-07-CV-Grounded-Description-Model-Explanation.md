@@ -71,7 +71,8 @@ $$
 
 **-Grounding Module-**
 
-grounding module为region attention的前置模块，其将区域特征信息加工，使其富有类别信息和时空信息，并将作为新的区域特征输入至region attention中。令原始区域特征为R $\in R^{d\*N}$，区域分类相似矩阵为$M_s(R)$，时空信息嵌入矩阵为$M_l$，则最终得到的新区域特征矩阵为$\hat R=W_g[R|M_s(R)|M_l]$,（p.s. [·|·]代表矩阵连接），作者将其命名为”the grounding-aware region encoding“。
+grounding module为region attention的前置模块，其将区域特征信息加工，使其富有类别信息和时空信息，并将作为新的区域特征输入至region attention中。
+令原始区域特征为R $\in R^{d\*N}$，区域分类相似矩阵为$M_s(R)$，时空信息嵌入矩阵为$M_l$，则最终得到的新区域特征矩阵为$\hat R=W_g[R|M_s(R)|M_l]$,（p.s. [·|·]代表矩阵连接），作者将其命名为"the grounding-aware region encoding"。
 
 ①区域分类相似矩阵$M_s(R)$
 
