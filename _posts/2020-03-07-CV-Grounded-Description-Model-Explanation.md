@@ -53,7 +53,7 @@ tags:								#标签
 
 [Noun Phrase]短的、非递归的短语，其指定于图片中的特定区域，并能被一个bounding box包围。Noun Phrase可以是一个或一组示例，也可以包含形容词、限定词、代词或介词。为了更加精确，鼓励注释器将复杂的NPs分解为多个简单的NP，e.g. “the man in a white shirt with a heart” 可以分解为三个NP：“the man”, “a white shirt”, 以及 “a heart”。
 
-**b. ** 理想状态下每一视频帧都会包含很多的区域注释,但对于训练开销而言，过多的注释会造成过大的负担，故ANet-Entities数据集主要是对视频帧进行了稀疏标注。
+**b.** 理想状态下每一视频帧都会包含很多的区域注释,但对于训练开销而言，过多的注释会造成过大的负担，故ANet-Entities数据集主要是对视频帧进行了稀疏标注。
 
 
 
