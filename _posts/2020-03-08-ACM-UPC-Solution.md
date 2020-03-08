@@ -38,14 +38,9 @@ $$
 
 ，其中dp(i,k)、dp(k,j)为子问题，cost(i,k,j)即为由i、j、k三顶点组成的三角形的贡献值。最终dp(1,n)即为答案。
 
-需要注意的是dp时，i需要从后往前遍历，由于最后答案i==1，即当遍历到i==1时需要用到其他状态的信息。同理，j、k需要从前往后遍历。AC代码如下：
+需要注意的是dp时，i需要从后往前遍历，由于最后答案i==1，即当遍历到i==1时需要用到其他状态的信息。同理，j、k需要从前往后遍历。AC代码主体部分如下：
 
 ```c++
-#include<bits/stdc++.h>
-#define INF 0x3f3f3f
-using namespace std;
-typedef long long ll;
-
 int n;
 int a[1010];
 int dp[1010][1010];
@@ -97,14 +92,7 @@ $$
 
 如此通过n->i,m->j，在计算c数组时保证j<=i,在利用s数组时保证j<=m，使查询复杂度变为O(1)。
 
-参考代码：
-
 ```C++
-#include<bits/stdc++.h>
-#define INF 0x3f3f3f
-using namespace std;
-typedef long long ll;
-
 int n,m,g;
 int c[2010][2010],s[2010][2010];
 
@@ -204,8 +192,8 @@ int main()
 {
   	cin>>T;
   	getFail(P,f);
-		find(T,P,f);
-		cout<<cnt;
+	find(T,P,f);
+	cout<<cnt;
 }
 
 ```
