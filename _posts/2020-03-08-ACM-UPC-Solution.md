@@ -16,7 +16,7 @@ tags:								#标签
 
 **[Contest Address](http://acm.upc.edu.cn/OnlineJudge/contest.php?cid=1007)**
 
-我就是一个贪心都要wa五发，kmp手写要写二十分钟，并查集最后find(i)会写成i，A题O(n^3)刚写完比赛就结束连卡过去的机会都没有，博弈题还没来得及看的智障qwqrz  这次补三题qwq
+我就是一个贪心都要wa五发，kmp手写要写二十分钟，并查集最后find(i)会写成i，A题O(n^3)刚写完比赛就结束连卡过去的机会都没有，博弈题还没来得及看的智障qwqrz
 
 事实证明偷懒不训练就是得挨打 不敢了不敢了呜呜呜
 
@@ -202,10 +202,10 @@ void getFail(char *P,int *f)
 }
 int main()
 {
-				cin>>T;
-        getFail(P,f);
-        find(T,P,f);
-        cout<<cnt;
+  	cin>>T;
+  	getFail(P,f);
+		find(T,P,f);
+		cout<<cnt;
 }
 
 ```
