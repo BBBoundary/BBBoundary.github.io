@@ -20,11 +20,15 @@ tags:								#标签
 
 事实证明偷懒不训练就是得挨打 不敢了不敢了呜呜呜
 
-## Problem A
+# Part I
+
+这部分是一定要补的题，相应的专题也需要多刷题。
+
+### Problem A
 
 [Problem Link](http://acm.upc.edu.cn/OnlineJudge/problem.php?cid=1007&pid=0)
 
-思路：区间dp
+思路：**区间dp**
 
 代码中设dp(i,j)为顶点i到顶点j的最优答案，显然当j==i或j==i+1时为0（不合法），故遍历时j需要从i+2开始。此处引入在i、j中的点k，则有：
 $$
@@ -72,21 +76,25 @@ int main(){
 
 
 
-## Problem K
+### Problem K
 
 [problem link]()
 
-思路：组合数公式:
+思路：**组合数公式**:
 $$
 c[i][j]=c[i-1][j]+c[i-1][j-1]
 $$
 ，并进行预处理操作。
 
-先对n、m均2e3的范围进行预处理。又由于题目为求个数问题且时多组询问，需要将结果离线值存储。此处通过存二维前缀和：
+先对n、m均2e3的范围进行预处理。又由于题目为求个数问题且时多组询问，需要将结果离线值存储。此处通过存**二维前缀和**：
+
+
 $$
 s[i][j]=s[i-1][j]+s[i][j-1]-s[i-1][j-1];\\
 if(c[i][j]==0)\ \  s[i][j]+=1;
 $$
+
+
 如此通过n->i,m->j，在计算c数组时保证j<=i,在利用s数组时保证j<=m，使查询复杂度变为O(1)。
 
 参考代码：
@@ -134,8 +142,84 @@ int main(){
 
 
 
-## Problem H
+### Problem H
 
 [Problem Link](http://acm.upc.edu.cn/OnlineJudge/problem.php?cid=1008&pid=7)
 
 ~~得，现在oj关了没法交题了明天再改~~
+
+
+
+# Part II
+
+这部分是过掉的题，做一个存档记录。
+
+### Problem B
+
+傻逼签到题，但更傻逼的是我wa了五发（人间迷惑行为）。就是一个贪心问题，价值密度越大越前面。
+
+当然我是直接在sort的cmp函数部分设为：
+$$
+return\ \ a.v*a.t+b.v*(a.t+b.t)<b.v*b.t+a.v*(b.t+a.t)
+$$
+，也就是两两比较让取结果好的排法。
+
+
+
+### Problem D
+
+字符串kmp签到题。是我B题wa了五发后转战的题，然后这题a了以后回去把B题a掉了……就是套了个kmp的板子然后主函数部分稍微写写就过。不过要注意对“00000”字符串的特判，由于题目给出条件是小于该大数的。
+
+存一下自己这场用的板子：
+
+```c++
+char T[1e6+10],P[1e6+10];
+int f[1e6+10];
+int cnt;		//主串中的子串个数
+
+void find(char *T,char *P,int *f)
+{
+    int n=strlen(T);
+    int m=strlen(P);
+    int j=0;
+    for(int i=0; i<n; i++)
+    {
+        if(j && T[i]!=P[j]) j=f[j];
+        if(T[i]==P[j]) j++;
+        if(j==m) {cnt++;j=f[j];}		//注意这里子串不能重叠，需要j=f[j]
+    }
+}
+void getFail(char *P,int *f)
+{
+    int m =strlen(P);
+    f[0]=f[1]=0;
+    for(int i=1; i<m; i++)
+    {
+        int j=f[i];
+        while(j && P[i]!=P[j]) j=f[j];
+        f[i+1] = P[i]==P[j]?j+1:0;
+    }
+}
+int main()
+{
+				cin>>T;
+        getFail(P,f);
+        find(T,P,f);
+        cout<<cnt;
+}
+
+```
+
+
+
+### Problem F
+
+比完发现是POJ原题。不过也算是一道非常基础的矩阵快速幂求和问题。~~qwq明天等能上oj了就把代码copy过来~~
+
+
+
+### Problem I
+
+并查集裸题。本来看到题目描述感觉这BFS我稳了，然后看到坐标范围1e9，那没事了。
+
+不过点的数量范围仅在1e3，就非常容易想到n^2的枚举方法，并用并查集维护星区的分类信息。
