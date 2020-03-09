@@ -38,9 +38,14 @@ $$
 
 ，其中dp(i,k)、dp(k,j)为子问题，cost(i,k,j)即为由i、j、k三顶点组成的三角形的贡献值。最终dp(1,n)即为答案。
 
-需要注意的是dp时，i需要从后往前遍历，由于最后答案i==1，即当遍历到i==1时需要用到其他状态的信息。同理，j、k需要从前往后遍历。AC代码主体部分如下：
+需要注意的是dp时，i需要从后往前遍历，由于最后答案i==1，即当遍历到i==1时需要用到其他状态的信息。同理，j、k需要从前往后遍历。AC代码如下：
 
 ```c++
+#include<bits/stdc++.h>
+#define INF 0x3f3f3f
+using namespace std;
+typedef long long ll;
+
 int n;
 int a[1010];
 int dp[1010][1010];
@@ -86,13 +91,18 @@ $$
 
 $$
 s[i][j]=s[i-1][j]+s[i][j-1]-s[i-1][j-1];\\
-if(c[i][j]==0)\ \  s[i][j]+=1;
+if(c[i][j]==0)\ \  s[i][j]+=1;\\
 $$
-
-
 如此通过n->i,m->j，在计算c数组时保证j<=i,在利用s数组时保证j<=m，使查询复杂度变为O(1)。
 
+参考代码：
+
 ```C++
+#include<bits/stdc++.h>
+#define INF 0x3f3f3f
+using namespace std;
+typedef long long ll;
+
 int n,m,g;
 int c[2010][2010],s[2010][2010];
 
@@ -112,6 +122,7 @@ void inits(){
             s[i][j]=s[i-1][j]+s[i][j-1]-s[i-1][j-1];
             if(c[i][j]==0) s[i][j]++;
         }
+      	s[i][i+1]=s[i][i]
     }
 }
 
@@ -122,6 +133,7 @@ int main(){
     inits();
     while(t--){
         scanf("%d%d",&n,&m);
+      	if(n<m) m=n;
         printf("%d\n",s[n][m]);
     }
 }
@@ -144,6 +156,8 @@ int main(){
 
 ### Problem B
 
+[Problem Link](http://acm.upc.edu.cn/OnlineJudge/problem.php?cid=1007&pid=1)
+
 傻逼签到题，但更傻逼的是我wa了五发（人间迷惑行为）。就是一个贪心问题，价值密度越大越前面。
 
 当然我是直接在sort的cmp函数部分设为：
@@ -155,6 +169,8 @@ $$
 
 
 ### Problem D
+
+[Problem Link](http://acm.upc.edu.cn/OnlineJudge/problem.php?cid=1007&pid=3)
 
 字符串kmp签到题。是我B题wa了五发后转战的题，然后这题a了以后回去把B题a掉了……就是套了个kmp的板子然后主函数部分稍微写写就过。不过要注意对“00000”字符串的特判，由于题目给出条件是小于该大数的。
 
@@ -192,8 +208,8 @@ int main()
 {
   	cin>>T;
   	getFail(P,f);
-	find(T,P,f);
-	cout<<cnt;
+		find(T,P,f);
+		cout<<cnt;
 }
 
 ```
@@ -202,11 +218,104 @@ int main()
 
 ### Problem F
 
-比完发现是POJ原题。不过也算是一道非常基础的矩阵快速幂求和问题。~~qwq明天等能上oj了就把代码copy过来~~
+[Problem Link](http://acm.upc.edu.cn/OnlineJudge/problem.php?cid=1007&pid=5)
+
+比完发现是POJ原题。不过也算是一道非常基础的矩阵快速幂求和问题。
+
+```c++
+#include<bits/stdc++.h>
+#define INF 0x3f3f3f
+using namespace std;
+typedef long long ll;
+
+int n;
+ll m,mod=1e9+7;
+struct Mat{
+    long long m[40][40];
+};
+Mat a,per;
+
+void init(){
+    for(int i=0; i<n; i++)
+        for(int j=0;j<n; j++){
+            scanf("%lld",&a.m[i][j]);
+            a.m[i][j]%=mod;
+            per.m[i][j]=(i==j);
+        }
+}
+
+Mat mul(Mat A,Mat B){
+    Mat ans;
+    for(int i=0; i<n; i++)
+        for(int j=0; j<n; j++){
+            ans.m[i][j]=0;
+            for(int k=0; k<n; k++)
+                ans.m[i][j]=(ans.m[i][j]+A.m[i][k]*B.m[k][j]%mod)%mod;
+            ans.m[i][j]%=mod;
+        }
+    return ans;
+}
+
+Mat power(ll k){
+    Mat p,ans=per;
+    p=a;
+    while(k){
+        if(k&1){
+            ans=mul(ans,p);
+            k--;
+        }
+        else{
+            k/=2;
+            p=mul(p,p);
+        }
+    }
+    return ans;
+}
+
+Mat add(Mat a,Mat b){
+    Mat c;
+    for(int i=0; i<n; i++)
+        for(int j=0; j<n; j++)
+            c.m[i][j]=(a.m[i][j]+b.m[i][j])%mod;
+    return c;
+}
+
+Mat sum(ll k){
+    if(k==1) return a;
+    Mat temp,b;
+    temp=sum(k/2);
+    if(k&1){
+        b=power(k/2+1);
+        temp=add(temp,mul(temp,b));
+        temp=add(temp,b);
+    }
+    else{
+        b=power(k/2);
+        temp=add(temp,mul(temp,b));
+    }
+    return temp;
+}
+
+int main(){
+    while(cin>>n>>m){
+        init();
+        Mat ans=sum(m);
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n-1;j++)
+                printf("%lld ",(ans.m[i][j]+mod)%mod);
+            printf("%lld\n",(ans.m[i][n-1]+mod)%mod);
+        }
+    }
+    return 0;
+}
+
+```
 
 
 
 ### Problem I
+
+[Problem Link](http://acm.upc.edu.cn/OnlineJudge/problem.php?cid=1007&pid=8)
 
 并查集裸题。本来看到题目描述感觉这BFS我稳了，然后看到坐标范围1e9，那没事了。
 
