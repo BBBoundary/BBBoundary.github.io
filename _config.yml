@@ -99,6 +99,9 @@ service-worker: true
 # Friends
 friends: [
     {
+        title: "Gghost",
+        href: "https://gjnghost.github.io"
+    },{
         title: "Wenzhuan",
         href: "https://wzyxv1n.top"
     },{
@@ -110,8 +113,5 @@ friends: [
     },{
         title: "louyu",
         href: "https://louyu.site"
-    },{
-        title: "Gghost",
-        href: "https://gjnghost.github.io"
     }
 ]
