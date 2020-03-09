@@ -311,12 +311,14 @@ int main(){
 
 ```
 
+另外贴一下郑老师@Edviw的构造qwq学到了学到了
 
+![](https://github.com/BBBoundary/BBBoundary.github.io/blob/master/img/ACM-UCP-F.jpg)
 
 ### Problem I
 
 [Problem Link](http://acm.upc.edu.cn/OnlineJudge/problem.php?cid=1007&pid=8)
 
-并查集裸题。本来看到题目描述感觉这BFS我稳了，然后看到坐标范围1e9，那没事了。
+并查集裸题。本来看到题目描述感觉这BFS我稳了，然后看到坐标范围1e9，哦那没事了。
 
 不过点的数量范围仅在1e3，就非常容易想到n^2的枚举方法，并用并查集维护星区的分类信息。
