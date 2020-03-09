@@ -311,9 +311,9 @@ int main(){
 
 ```
 
-另外贴一下郑老师@Edviw的构造qwq学到了学到了
+另外贴一下郑老师@Edwiv的构造qwq学到了学到了
 
-![](https://github.com/BBBoundary/BBBoundary.github.io/blob/master/img/ACM-UCP-F.jpg)
+![](img/ACM-UCP-F.jpg)
 
 ### Problem I
 
