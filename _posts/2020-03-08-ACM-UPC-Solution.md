@@ -311,7 +311,7 @@ int main(){
 
 ```
 
-另外贴一下郑老师@Edwiv的构造qwq学到了学到了
+另外,贴一下郑老师@Edwiv的构造qwq学到了学到了
 
 ![](img/ACM-UCP-F.jpg)
 
