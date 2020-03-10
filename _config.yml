@@ -18,7 +18,7 @@ sidebar-avatar: /img/upd_img1.png      # use absolute URL, seeing it's used in b
 
 # SNS settings
 RSS: false
-weibo_username:     5621847260
+#weibo_username:     5621847260
 zhihu_username:     bing-jie-11
 github_username:    BBBoundary
 #facebook_username:  baiying.qiu.7
@@ -100,7 +100,7 @@ service-worker: true
 friends: [
     {
         title: "Gghost",
-        href: "https://gjnghost.github.io"
+        href: "https://gjnghost.top"
     },{
         title: "Wenzhuan",
         href: "https://wzyxv1n.top"
