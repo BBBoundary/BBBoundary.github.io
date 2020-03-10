@@ -4,7 +4,7 @@ title:      【杂谈】End and Beginning
 subtitle:   关于本站建立初衷，以及个人反思总结
 date:       2020-03-04
 author:     Culaccino
-header-img: img/upd_img13.JPG
+header-img: img/upd_img13.png
 catalog: true
 tags:
     - 杂谈
