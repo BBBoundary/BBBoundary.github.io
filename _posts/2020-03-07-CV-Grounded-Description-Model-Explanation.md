@@ -29,7 +29,7 @@ tags:								#标签
 
 为了达到这个效果，作者在数据集ActivityNet Captions上增加了158k个带注释的边界框，得到数据集ActivityNet-Entities。该数据集不仅可以用来训练模型，也可以用来评估描述的准确性。
 
-![](/img/CV_Grounded-img1.png){:height="50%" width="50%"}
+![](/img/CV_Grounded-img1.png)
 
 在该篇论文中，作者提出了一种能够利用该数据集训练的模型”novel video description model“，其包括三个部分：grounding、region attention、language generation。
 
@@ -45,7 +45,7 @@ tags:								#标签
 
 视频描述领域不像在图片描述领域有Flickr30k-Entities那样大范围的数据集，而数据集ActivityNet Captions仅包含了对20k视频的注释但缺乏框定目标的注释（grounding annotations），故作者在ActivityNet Captions的基础上新增了15k个视频以及158k个带注释边框，建立了ActivityNet-Entities数据集。
 
-![](/img/CV_Grounded-img2.png){:height="50%" width="50%"}
+![](/img/CV_Grounded-img2.png)
 
 对于注释边框，作者给出了两点说明：
 
