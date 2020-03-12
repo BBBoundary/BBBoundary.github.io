@@ -220,7 +220,7 @@ int main()
 
 [Problem Link](http://acm.upc.edu.cn/OnlineJudge/problem.php?cid=1007&pid=5)
 
-比完发现是POJ原题。不过也算是一道非常基础的矩阵快速幂求和问题。
+比完发现是POJ原题,不过也算是一道非常基础的矩阵快速幂求和问题。
 
 ```c++
 #include<bits/stdc++.h>
@@ -311,7 +311,7 @@ int main(){
 
 ```
 
-另外,贴一下郑老师@Edwiv的构造qwq学到了学到了
+当然可以构造嵌套矩阵更巧妙地快速解题,贴一下郑老师@Edwiv的构造qwq真是学到了
 
 ![](/img/ACM-UCP-F.jpg)
 
