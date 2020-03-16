@@ -1,6 +1,6 @@
 ---
 layout:    post   				    # 使用的布局（不需要改）
-title:    【ACM-XCPC】Codeforces-Collection for March,2020(Updating)  # 标题 
+title:    「ACM-XCPC」Codeforces-Collection for March,2020 (Updating)  # 标题 
 subtitle:  Solution for Codeforces Round#627~628  #副标题
 date:      2020-03-14 				# 时间
 author:    Culaccino					# 作者
