@@ -1,6 +1,6 @@
 ---
 layout:    post   				    # 使用的布局（不需要改）
-title:    【ACM-XCPC】2020-UPC新生赛题解  # 标题 
+title:    「ACM-XCPC」2020-UPC新生赛题解  # 标题 
 subtitle:  又名《这个菜鸡以为21:30就结束了于是停了半个小时真是丢死人了》   #副标题
 date:      2020-03-08 				# 时间
 author:    Culaccino					# 作者
