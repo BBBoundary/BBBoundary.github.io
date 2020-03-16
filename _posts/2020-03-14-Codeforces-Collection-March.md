@@ -26,7 +26,7 @@ tags:								#标签
 
 **[Code Link](https://github.com/BBBoundary/ACM-XCPC_Wsystem9350/tree/master/Codeforces/Round%23627%20div3)**
 
-### Problem E
+### E- Sleeping Schedule
 
 > Vova had a pretty weird sleeping schedule. There are h hours in a day. Vova will sleep exactly n times. The i-th time he will sleep exactly after ai hours from the time he woke up. You can assume that Vova woke up exactly at the beginning of this story (the initial time is 0). Each time Vova sleeps **exactly one day** (in other words, h hours).
 >
@@ -42,7 +42,7 @@ dp。利用dp[i][j]来存储转移状态，i表示第i个时刻，j表示第i时
 
 需要进行初始化，对不合法的时间状态全部赋-INF（起始时唯一合法状态为dp[0][0]=0）。再对每个i的每个可能时刻j(0~h-1)进行遍历，其中对(j+a[i])%h和(j+a[i]-1+h)%h分别进行两次转移（注意j分开循环）。
 
-### Problem F
+### F- Maximum White Subtree
 
 > You are given a tree consisting of n vertices. A tree is a connected undirected graph with n−1 edges. Each vertex v of this tree has a color assigned to it (av=1 if the vertex v is white and 0 if the vertex v is black).
 >
