@@ -1,6 +1,6 @@
 ---
 layout:    post   				    # 使用的布局（不需要改）
-title:    【专业课】数据库系统原理错题集（更新中）  # 标题 
+title:    【Pro-Courses】数据库系统原理错题集（Updating）  # 标题 
 subtitle:  来源于平时上课作业的错题好题收集，主要注重对基础知识的铺垫。 #副标题
 date:      2020-03-09 				# 时间
 author:    Culaccino					# 作者
