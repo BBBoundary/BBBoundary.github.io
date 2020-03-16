@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      【杂谈】End and Beginning
+title:      「杂谈」End and Beginning
 subtitle:   关于本站建立初衷，以及个人反思总结
 date:       2020-03-04
 author:     Culaccino
