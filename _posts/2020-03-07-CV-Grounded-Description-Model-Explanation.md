@@ -1,6 +1,6 @@
 ---
 layout:    post   				    # 使用的布局（不需要改）
-title:    【CV-Visual Caption】Grounded-Description Model Explanation  # 标题 
+title:    「CV-Visual Caption」Grounded-Description Model Explanation  # 标题 
 subtitle:  2019_Luowei Zhou_Grounded Video Description   #副标题
 date:      2020-03-07 				# 时间
 author:    Culaccino					# 作者
