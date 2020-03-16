@@ -132,7 +132,7 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 ![](/img/ACM_628.png)
 
-[Code](https://pasteme.cn/30327)  Password: WorldFianl2020
+[Code](https://pasteme.cn/30327)  Password: WorldFinal2020
 
 
 
