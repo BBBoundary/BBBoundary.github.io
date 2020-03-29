@@ -57,18 +57,32 @@ kramdown:
 
 #评论系统
 #Disqus settings（https://disqus.com/）
-disqus_username: Culaccino
+#disqus_username: Culaccino
 
 # Gitalk
 #gitalk:
-enable: true    #是否开启Gitalk评论
-clientID: 2ef92afa90bf66dce1ab                            #生成的clientID
-clientSecret: 4d5535ce766f1ebcc1b9b6cbd41cc6bde14586b8    #生成的clientSecret
-repo: BBBoundary.github.io    #仓库名称
-owner: BBBoundary    #github用户名
-admin: BBBoundary
-distractionFreeMode: true #是否启用类似FB的阴影遮罩
+#enable: true    #是否开启Gitalk评论
+#clientID: 2ef92afa90bf66dce1ab                            #生成的clientID
+#clientSecret: 4d5535ce766f1ebcc1b9b6cbd41cc6bde14586b8    #生成的clientSecret
+#repo: BBBoundary.github.io    #仓库名称
+#owner: BBBoundary    #github用户名
+#admin: BBBoundary
+#distractionFreeMode: true #是否启用类似FB的阴影遮罩
 # 统计
+
+
+#Comments
+comments:
+disqus: false
+disqus_url: 'http://bbboundary.disqus.com/embed.js'
+
+gitalk: true
+gitalk_clientID: 2ef92afa90bf66dce1ab
+gitalk_Secret: 4d5535ce766f1ebcc1b9b6cbd41cc6bde14586b8
+gitalk_repo: BBBoundary.github.io
+gitalk_owner: BBBoundary
+gitalk_admin: BBBoundary
+distractionFreeMode: true
 
 # Analytics settings
 # Baidu Analytics
