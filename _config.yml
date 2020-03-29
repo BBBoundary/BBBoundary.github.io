@@ -62,14 +62,12 @@ disqus_username: Culaccino
 # Gitalk
 #gitalk:
 enable: true    #是否开启Gitalk评论
-clientID: a6d616f2f2494f619256                            #生成的clientID
-clientSecret: 6e7c8e116ac88e55734797aeabbc3bc2e6516419    #生成的clientSecret
+clientID: 2ef92afa90bf66dce1ab                            #生成的clientID
+clientSecret: 4d5535ce766f1ebcc1b9b6cbd41cc6bde14586b8    #生成的clientSecret
 repo: BBBoundary.github.io    #仓库名称
 owner: BBBoundary    #github用户名
 admin: BBBoundary
 distractionFreeMode: true #是否启用类似FB的阴影遮罩
-
-
 # 统计
 
 # Analytics settings
