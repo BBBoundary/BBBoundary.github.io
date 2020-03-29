@@ -26,7 +26,7 @@ tags:								#标签
 
 **[Code Link](https://github.com/BBBoundary/ACM-XCPC_Wsystem9350/tree/master/Codeforces/Round%23627%20div3)**
 
-### Problem E
+### E
 
 > Vova had a pretty weird sleeping schedule. There are h hours in a day. Vova will sleep exactly n times. The i-th time he will sleep exactly after ai hours from the time he woke up. You can assume that Vova woke up exactly at the beginning of this story (the initial time is 0). Each time Vova sleeps **exactly one day** (in other words, h hours).
 >
@@ -42,7 +42,7 @@ dp。利用dp[i][j]来存储转移状态，i表示第i个时刻，j表示第i时
 
 需要进行初始化，对不合法的时间状态全部赋-INF（起始时唯一合法状态为dp[0][0]=0）。再对每个i的每个可能时刻j(0~h-1)进行遍历，其中对(j+a[i])%h和(j+a[i]-1+h)%h分别进行两次转移（注意j分开循环）。
 
-### Problem F
+### F
 
 > You are given a tree consisting of n vertices. A tree is a connected undirected graph with n−1 edges. Each vertex v of this tree has a color assigned to it (av=1 if the vertex v is white and 0 if the vertex v is black).
 >
@@ -69,7 +69,7 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 **[Code Link](https://github.com/BBBoundary/ACM-XCPC_Wsystem9350/tree/master/Codeforces/Round%23628%20div2)**
 
-### A- EhAb AnD gCd
+### A
 
 题目：
 
@@ -79,7 +79,7 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 对m的奇偶性分开讨论：①当m==2时，令x=1，y=1 (特判)；②当m为奇数时，令x=1,y=m-1 ②当m为大于2的偶数时，令x=2，y=m-2；
 
-### B- CopyCopyCopyCopyCopy
+### B
 
 题目：
 
@@ -91,7 +91,7 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 由于重复了n遍，即原本数组中的各个元素均可以因被取于不同位置的新数组而相对位置任意。故仅需在第一轮中取最小、第二轮中取第二小……即可。考虑到严格递增，所以需要一个set过滤掉重复元素，剩下的元素个数即为答案。
 
-### C- Ehab and Path-etic MEXs
+### C
 
 题目：
 
@@ -111,7 +111,7 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 ②若该结构不为链，即至少有一个结点的度大于等于三，则选取该结点，将其关联边从0,1,……开始编号。对于不经过该点的路径，其MEX==0；对于经过该点的路径，其MEX<=2（最大的为MEX==2时，此时同时经过0、1两条边）。剩下的边可以随意赋值。
 
-### D- Ehab the Xorcist
+### D
 
 题目：
 
@@ -148,7 +148,7 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 **[Code Link](https://github.com/BBBoundary/ACM-XCPC_Wsystem9350/tree/master/Codeforces/Round%23629%20div3)**
 
-### D-Carousel
+### D
 
 题目：
 
@@ -178,7 +178,7 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 
 
-### E-Tree Queries
+### E
 
 题目：
 
