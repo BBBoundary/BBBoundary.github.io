@@ -186,7 +186,7 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 >
 > A tree is a connected undirected graph with n−1 edges.
 >
-> You are given m queries. The i-th query consists of the set of ki distinct vertices vi[1],vi[2],…,vi[ki]. Your task is to say if there is a path from the root to some vertex 𝑢u such that each of the given k vertices is either belongs to this path or has the distance 1 to some vertex of this path.
+> You are given m queries. The i-th query consists of the set of ki distinct vertices vi[1],vi[2],…,vi[ki]. Your task is to say if there is a path from the root to some vertex u such that each of the given k vertices is either belongs to this path or has the distance 1 to some vertex of this path.
 
 题意：给出一棵共有n个结点的树，共有m个询问，每个询问包含q个点，求该树上是否存在一条路径，使得这q个到该条路径的距离不大于1.
 
