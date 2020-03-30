@@ -26,7 +26,7 @@ tags:								#标签
 
 **[Code Link](https://github.com/BBBoundary/ACM-XCPC_Wsystem9350/tree/master/Codeforces/Round%23627%20div3)**
 
-### E
+## E
 
 > Vova had a pretty weird sleeping schedule. There are h hours in a day. Vova will sleep exactly n times. The i-th time he will sleep exactly after ai hours from the time he woke up. You can assume that Vova woke up exactly at the beginning of this story (the initial time is 0). Each time Vova sleeps **exactly one day** (in other words, h hours).
 >
@@ -42,7 +42,7 @@ dp。利用dp[i][j]来存储转移状态，i表示第i个时刻，j表示第i时
 
 需要进行初始化，对不合法的时间状态全部赋-INF（起始时唯一合法状态为dp[0][0]=0）。再对每个i的每个可能时刻j(0~h-1)进行遍历，其中对(j+a[i])%h和(j+a[i]-1+h)%h分别进行两次转移（注意j分开循环）。
 
-### F
+## F
 
 > You are given a tree consisting of n vertices. A tree is a connected undirected graph with n−1 edges. Each vertex v of this tree has a color assigned to it (av=1 if the vertex v is white and 0 if the vertex v is black).
 >
@@ -58,7 +58,6 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 
 
-
 # Round#628 div2
 
 因为家里网的原因 比赛前一直上不去就没参加……（然后第二天把路由器搬到房间里来了果然舒服多了（x
@@ -69,7 +68,7 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 **[Code Link](https://github.com/BBBoundary/ACM-XCPC_Wsystem9350/tree/master/Codeforces/Round%23628%20div2)**
 
-### A
+## A
 
 题目：
 
@@ -79,7 +78,7 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 对m的奇偶性分开讨论：①当m==2时，令x=1，y=1 (特判)；②当m为奇数时，令x=1,y=m-1 ②当m为大于2的偶数时，令x=2，y=m-2；
 
-### B
+## B
 
 题目：
 
@@ -91,7 +90,7 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 由于重复了n遍，即原本数组中的各个元素均可以因被取于不同位置的新数组而相对位置任意。故仅需在第一轮中取最小、第二轮中取第二小……即可。考虑到严格递增，所以需要一个set过滤掉重复元素，剩下的元素个数即为答案。
 
-### C
+## C
 
 题目：
 
@@ -111,7 +110,7 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 ②若该结构不为链，即至少有一个结点的度大于等于三，则选取该结点，将其关联边从0,1,……开始编号。对于不经过该点的路径，其MEX==0；对于经过该点的路径，其MEX<=2（最大的为MEX==2时，此时同时经过0、1两条边）。剩下的边可以随意赋值。
 
-### D
+## D
 
 题目：
 
@@ -137,7 +136,6 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 
 
-
 # Round#629 div3
 
 毒瘤D题我吐了调了一万年然后还是没把坑全踩遍，虽然我是傻逼，但是题目更傻逼，让我这个傻逼也做不出来（确信
@@ -148,7 +146,7 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 **[Code Link](https://github.com/BBBoundary/ACM-XCPC_Wsystem9350/tree/master/Codeforces/Round%23629%20div3)**
 
-### D
+## D
 
 题目：
 
@@ -176,9 +174,7 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 ​		反之则：1 2 1 2 ……2 3
 
-
-
-### E
+## E
 
 题目：
 
@@ -194,15 +190,64 @@ dfs预处理+树形dp。由于为$cnt_w-cnt_b$，对于输入信息键入，并�
 
 1）对于给出的树先要处理好每个结点的信息，包括①每个结点的深度②每个结点的倍增父结点。
 
-关于倍增，其实这是一个在算法中非常常用的思想，由于一个一个遍历太慢，所以利用每个数的二进制表示，并每次减掉2的幂次大小，使得寻找父结点的工作能够压缩至o(logn)内完成。这里令f[i][j]即表示第i个结点的第2^j个父结点，则有
-
+关于倍增，其实这是一个非常在算法中非常常用的思想，由于一个一个遍历太慢，所以利用每个数的二进制表示，并每次减掉2的幂次大小，使得寻找父结点的工作能够压缩至o(logn)内完成。这里令f[i][j]即表示第i个结点的第2^j个父结点，则有
 $$
 f[i][j]=f[f[i][j-1]][j-1]
 $$
+
 
 2）对于询问的一个结点集，先找出其中深度最深的结点，若路径存在，则必定是从根节点向该结点的过程路径。找出该结点las后，找出每个结点v与该节点的最小公共祖先lca，然后判断该祖先lca与结点v的深度差是否小于等于1即可。
 
 寻找lca的方法（设寻找a与b两个结点的lca）：将a设为其中深度较大的那个，然后令a向上寻找祖先直至与b的深度相同，然后a与b一起向上找祖先（即步长相同），直至找到最近的一个。
 
+
+
+## F
+
+题目：
+
+> You are given the array a consisting of n elements and the integer k≤n.
+>
+> You want to obtain **at least** k equal elements in the array a. In one move, you can make one of the following two operations:
+>
+> - Take **one** of the minimum elements of the array and increase its value by one (more formally, if the minimum value of a is mn then you choose such index i that ai=mn and set ai:=ai+1); 
+> - take **one** of the maximum elements of the array and decrease its value by one (more formally, if the maximum value of a is mx then you choose such index i that ai=mx and set ai:=ai−1). 
+>
+> Your task is to calculate the minimum number of moves required to obtain **at least** k equal elements in the array.
+
+题意：给出n个数，需要使其中至少k个数相等，每次的操作为将最大的数-1，或将最小的数+1，问最少操作几次。
+
+思路：易证最后的k个数必定是原数组中存在的数（此处不作证明），此题实际上是模拟数组两头均向某数靠拢的过程，对每个数进行操作，并最终取最小。先对数组升序排序，存下前缀和（即可得到后缀和）。
+
+对于结果是0的情况：先对每个数进行计数，若某个数的个数超过k则直接输出0，return；
+
+假设对于第i个数$$a[i]$$:
+
+1）将其前面的a[1]、a[2]……a[i-1]转化为a[i],则有：
+
+
+$$
+SumLeft=a[i]-a[1]+a[i]-a[2]……a[i]-a[i-1]\\=i*a[i]-\sum_{j=1}^ia[j]
+$$
+
+
+①若i>=k，对于前i-1个中仅需k-1个即可成立，即当a[1]……a[i-1]全部转化为a[i]后，仅需要k-1个再变成a[i]即可，故将n-k个退化为a[i-1]。②若i<k，则该种情况(k个全部由左半部分提供)不成立，不计入最终情况。
+
+2）将其后面的a[i+1]、a[i+2]……a[n]转化为a[i],则有：
+
+
+$$
+SumRight=a[n]-a[i]+a[n-1]-a[i]+……a[i+1]-a[i]\\=\sum_{j=i}^na[j]-(n-i+1)*a[i]
+$$
+
+
+①若n-i+1>=k，对于后n-i中仅需k-1个即可成立，即当a[i+1]……a[n]全部转化为a[i]，后，仅需k-1个再变成a[i],故将n-i-k+1个退化为a[i+1]。②若n-i+1<k，则该种情况(k个全部由右半部分提供)不成立，不计入最终情况。
+
+3）对于两边都取的情况，即将上述左右两边SumLeft、SumRight合并，且因为左边取了包括a[i]的k个，右边取了包括a[i]的k个，故两边共取k个的情况为
+
+
+$$
+Sum=SumLeft+SumRight-k+1\\=(2i+n-1)*a[i]-\sum_{j=1}^ia[j]+\sum_{j=i}^na[j]-(n-k)
+$$
 
 
