@@ -1,7 +1,7 @@
 ---
 layout:    post   				    # 使用的布局（不需要改）
-title:    「ACM-XCPC」Codeforces-Collection for March，2020(Updating)  # 标题 
-subtitle:  Solution for Codeforces Round#627~629  #副标题
+title:    「ACM-XCPC」Codeforces-Collection for March，2020  # 标题 
+subtitle:  Solution for Codeforces Round#627~630  #副标题
 date:      2020-03-14 				# 时间
 author:    Culaccino					# 作者
 header-img: img/upd_img9.png        #这篇文章标题背景图片
@@ -251,3 +251,146 @@ Sum=SumLeft+SumRight-k+1\\=(2i+n-1)*a[i]-\sum_{j=1}^ia[j]+\sum_{j=i}^na[j]-(n-k)
 $$
 
 
+# Round#630 div2
+
+交了A题以后再也没有流畅的交过题 / 果然雨天晚上不适合打cf / 难得的两个小时半的比赛 被家里网演了俩小时是真的难受。
+
+**[Contest Link](http://codeforces.com/contest/1332)**
+
+**[Code Link](https://github.com/BBBoundary/ACM-XCPC_Wsystem9350/tree/master/Codeforces/Round%23630%20div2)**
+
+
+
+## A
+
+题目：
+
+> Alice has a cute cat. To keep her cat fit, Alice wants to design an exercising walk for her cat! 
+>
+> Initially, Alice's cat is located in a cell (𝑥,𝑦)(x,y) of an infinite grid. According to Alice's theory, cat needs to move: 
+>
+> - exactly a steps left: from (u,v) to (u−1,v); 
+> - exactly b steps right: from (u,v) to (u+1,v); 
+> - exactly c steps down: from (u,v) to (u,v−1); 
+> - exactly d steps up: from (u,v) to (u,v+1). 
+>
+> Note that the moves can be performed in an **arbitrary order**. For example, if the cat has to move 1 step left, 3 steps right and 2 steps down, then the walk right, down, left, right, right, down is valid.
+>
+> Alice, however, is worrying that her cat might get lost if it moves far away from her. So she hopes that her cat is **always** in the area [𝑥1,𝑥2]×[y1,y2], i.e. for every cat's position (u,v) of a walk x1≤u≤x2 and y1≤v≤y2 holds.
+>
+> Also, note that the cat can visit the same cell multiple times.
+>
+> Can you help Alice find out if there exists a walk satisfying her wishes?
+>
+> Formally, the walk should contain exactly a+b+c+d unit moves (a to the left, b to the right, c to the down, d to the up). Alice can do the moves in **any** order. Her current position (u,v) should **always** satisfy the constraints: x1≤u≤x2, y1≤v≤y2. The staring point is (x,y).
+>
+> You are required to answer t test cases **independently**.
+
+题意：给定小猫的初始坐标和可以活动的范围，以及所有的动作指令，可以任意搭配动作顺序，求这些是否有一种解法可以令小猫的活动不会超出给定范围。
+
+签到题。先对活动范围的x轴、y轴方向上能否有活动进行判断，再消除【上下左右】、【上下】、【左右】的抵消影响，再进行判断。
+
+
+
+## B
+
+题目：
+
+> A positive integer is called *composite* if it can be represented as a product of two positive integers, both greater than 1. For example, the following numbers are composite: 6, 4, 120, 27. The following numbers aren't: 1, 2, 3, 17, 97.
+>
+> Alice is given a sequence of n composite numbers a1,a2,…,an.
+>
+> She wants to choose an integer m≤11 and color each element one of m colors from 11 to m so that:
+>
+> - for each color from 1 to m there is at least one element of this color; 
+> - each element is colored and colored exactly one color; 
+> - the greatest common divisor of any two elements that are colored the same color is greater than 1, i.e. gcd(ai,aj)>1 for each pair i,j if these elements are colored the same color. 
+>
+> Note that equal elements can be colored different colors — you just have to choose one of m colors for each of the indices from 1 to n.
+>
+> Alice showed already that if all ai≤1000 then she can always solve the task by choosing some m≤11.
+>
+> Help Alice to find the required coloring. Note that you don't have to minimize or maximize the number of colors, you just have to find the solution with some 𝑚m from 1 to 11.
+
+题意：给出一串数字，现在要给这些数字上色（从1到m）。若两个数字被涂成了相同的颜色，则这两个数字必有公因数。已知给出的一串数字必能用11种颜色完成，求其中一种可解的方法。
+
+我人傻了，当时已知以为上限11种是定理证明出来的而不是题目数据保证的，然后敲了100+行wa3心态直接崩了qwq然后看了一眼榜还在想你们怎么都秒了？？？
+
+既然是数据保证那就太简单了，直接给出前11个质数，对输入每个去判断，对于可以整除的就归到此类，全部输出即可。
+
+
+
+## C
+
+题目：
+
+> Word s of length n is called 𝑘k-complete if 
+>
+> - s is a palindrome, i.e. si=sn+1−i for all 1≤i≤n; 
+> - s has a period of k, i.e. si=sk+i for all 1≤i≤n−k. 
+>
+> For example, "abaaba" is a 3-complete word, while "abccba" is not.
+>
+> Bob is given a word s of length n consisting of only lowercase Latin letters and an integer k, such that n is divisible by k. He wants to convert s to any k-complete word.
+>
+> To do this Bob can choose some i (1≤i≤n) and replace the letter at position i with some other lowercase Latin letter.
+>
+> So now Bob wants to know the minimum number of letters he has to replace to convert s to any k-complete word.
+>
+> Note that Bob can do zero changes if the word s is already k-complete.
+>
+> You are required to answer t test cases **independently**.
+
+题意：定义k-completed数：对称且符合周期为k。现给出一个字符串，可以对其元素进行修改，求最少改几次可以满足该字符串为k-completed数。数据范围：
+
+>  t (1≤t≤1e5) — the number of test cases.
+>
+> The first line of each test case contains two integers n and k (1≤k<n≤2e5, n is divisible by k).
+>
+> The second line of each test case contains a word s of length n.
+>
+> It is guaranteed that word s only contains lowercase Latin letters. And it is guaranteed that the sum of n over all test cases will not exceed 2e5.
+
+之前周末PTA训练赛有做过类似的题，就是对于等价类中最后全部更新为数量最多的字母，即该类贡献=总数-maxn，再等价类间求贡献和。根据题意，回文串需要另每个i有$$s_i$$与$$s_{n-i+1}$$等价，对于周期性，需要$$s_i$$与$$s_{i+k}$$等价。
+
+至于等价类的存储，我比赛结束后马上敲了一份类合并时直接二维数组逐个更新的做法，然后T2了qwq 第二天用了并查集存下等价类整个等价的结构，最后一起另做计数。
+
+
+
+## D
+
+题目：
+
+> 
+> Bob is playing a game named "Walk on Matrix".
+>
+> In this game, player is given an n×m matrix A=(ai,j), i.e. the element in the i-th row in the j-th column is ai,j. Initially, player is located at position (1,1) with score a1,1. 
+>
+> To reach the goal, position (n,m), player can move right or down, i.e. move from (x,y) to (x,y+1) or (x+1,y), as long as player is still on the matrix.
+>
+> However, each move changes player's score to the [bitwise AND](https://en.wikipedia.org/wiki/Bitwise_operation#AND) of the current score and the value at the position he moves to.
+>
+> Bob can't wait to find out the maximum score he can get using the tool he recently learnt  — **dynamic programming**. Here is his algorithm for this problem.
+>
+> However, he suddenly realize that the algorithm above fails to output the maximum score for some matrix A. Thus, for any given non-negative integer k, he wants to find out an n×m matrix A=(ai,j) such that 
+>
+> - 1≤n,m≤500 (as Bob hates large matrix); 
+> - 0≤ai,j≤3e5  for all 1≤i≤n,1≤j≤m (as Bob hates large numbers); 
+> - the difference between the maximum score he can get and the output of his algorithm is **exactly** k. 
+>
+> It can be shown that for any given integer k such that 0≤k≤1e5, there exists a matrix satisfying the above constraints.
+>
+> Please help him with it!
+
+题意：现有一个n*m的矩阵，Bob现在在(1,1)的位置，目标是（n,m)，到达每一步的得分为之前得分与当前格的数字的位与运算结果。Bob他想用DP算法来计算最优解，但由于是位运算,$$d[i][j]=max(dp[i-1][j]&dp[i][j],d[i][j-1]&dp[i][j])$$的转移方程其实是假的，并不一定得到最优解。
+
+现给出整数k，让我们自己定义一个矩阵，使得最优解和Bob’s DP的结果正好为k，且要注意定义的矩阵的规格和元素范围的限制。
+
+思路：对于最终结果相差k直接构造：k&k==k, INF&k==0（这里可以INF=1<<17，只需即不超过3e5又比1e5大即可）；又需要构造出相应能够满足两种算法需求的前提元素，即可得到最终矩阵如下：
+
+
+$$
+INF+k\ ,\ k\ ,\ 0\\
+INF,INF+k, k
+$$
+(先去学编译了E和F回来再补qwq)
