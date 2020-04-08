@@ -234,3 +234,55 @@ Var[X_b|X_a]=Var[X_{b·a}]=\sigma_{bb·a}\\
 $$
 
 
+#### 3)求联合概率分布
+
+ 已知有：
+$$
+P(x)\sim N(x|\mu\ ,\ \Lambda^{-1})\\
+P(y|x)\sim N(y|Ax+b\ ,\ L^{-1})
+$$
+求
+$$
+P(y)、P(x|y)
+$$
+
+
+①求$P(y)$:
+
+对应于已知条件，令$y=Ax+b+\epsilon,\ \ \ \epsilon \sim N(0,L^{-1})$
+
+
+$$
+\Rightarrow E[y]=E[Ax+b+\epsilon]=A\mu+b\\
+Var[y]=Var[Ax+b+\epsilon]=A^2\Lambda^{-1}+L^{-1}\\
+\Rightarrow y\sim N(A\mu+b\ ,A^2\Lambda^{-1}+L^{-1})
+$$
+
+
+②求
+$$
+P(x|y):
+$$
+
+
+令
+$$
+z=\begin{pmatrix}x\\y\end{pmatrix}\sim N(\begin{pmatrix}\mu\\A\mu+b\end{pmatrix},\begin{pmatrix}\Lambda^{-1}&\Delta\\\Delta&A^2\Lambda^{-1}+L^{-1}\end{pmatrix})
+$$
+
+
+其中$\Delta=Cov(x,y)$:
+$$
+\Delta=E[(x-\mu)(y-A\mu-b)^T]\\
+=E[(x-\mu)(Ax-A\mu+\epsilon)^T]\\
+=E[(x-\mu)(Ax-A\mu)^T]+E[(x-\mu)\epsilon^T]\\
+=E[(x-\mu)(x-\mu)^T]A^T+0\\
+=Var(X)A^T\\
+=\Lambda^{-1}A^T
+$$
+
+
+故此时可以得到$z$的分布，求P(x|y）可以根据前面求条件概率的方法，最终可得到：
+$$
+x|y\sim N(\mu_{xy}+\Delta·\Lambda·y\ ,\sigma_{xx·y})
+$$
