@@ -38,8 +38,9 @@ $$
 p(\theta|x)=\frac {p(\theta*x)}{p(x)}=\frac {p(x|\theta)*p(\theta)}{p(x)}
 $$
 
-
 其中，由于x为观测样本，即p(x)是固定的。故有
+
+
 $$
 p(\theta|x)∝p(x|\theta)*p(\theta)
 $$
@@ -50,13 +51,14 @@ $$
 $$
 
 
-由MAP可看出，贝叶斯派是通过后验概率$P(\theta|x)$进行迭代优化，又经过贝叶斯公式的转换，$P(\theta)$即为观察者当前状态下的「知识状态」，$P(x|\theta)$即为在该种知识状态下的似然，即体现出“用观察者的知识状态去judge这种推断是否恰当，然后不断迭代至最优”，贝叶斯派所认为的「参数是随机变量」也体现在此处。
+
+由MAP可看出，贝叶斯派是通过后验概率$$P(\theta|x)$$进行迭代优化，又经过贝叶斯公式的转换，$$P(\theta)$$即为观察者当前状态下的「知识状态」，$$P(x|\theta)$$即为在该种知识状态下的似然，即体现出“用观察者的知识状态去judge这种推断是否恰当，然后不断迭代至最优”，贝叶斯派所认为的「参数是随机变量」也体现在此处。
 
 贝叶斯派的这种设计思路在于解决一个核心问题——如何构建一个满足特定条件的逻辑体系，使得其能通过一个实数对观测者论断进行合理性判断，从而允许观测者在不完全信息的状态下进行推断。设已有已知样本X，现在要推断新事件$\hat x$，则有：
 
 
 $$
-P(\hat x|X)=\int_\theta P(\hat x,\theta|X)d\theta\\=\int_\theta P(\hat x|\theta)*P(\theta|X)d\theta
+P(\hat x | X)=\int_\theta P(\hat x,\theta|X)d\theta\\=\int_\theta P(\hat x|\theta)*P(\theta|X)d\theta
 $$
 
 
@@ -80,7 +82,7 @@ $$
 
 **ps:**这种线性高斯模型在P-PCA降维中非常常用，具体可以见后序博客。
 
-统一规定：$$X(data)=(x_1,x_2,……x_N)^T\ \ \ \in R^{N*p}$$，其中，$x_i$独立同分布，有$x_i~N(\mu,\sigma^2)$。
+统一规定：$$X(data)=(x_1,x_2,……x_N)^T\ \ \ \in R^{N*p}$$，其中，$x_i$独立同分布，有$$x_i\simN(\mu,\sigma^2)$$。
 
 则有：
 
@@ -105,16 +107,17 @@ E[\sigma^2_{MLE}]=E[\frac {1}{N}\sum_{i=1}^Nx_i^2-\mu_{MLE}^2]\\
 =\frac {N-1}{N}\sigma^2
 $$
 
-
 对于多维情况，可由以下步骤进行计算优化:
+
+
 $$
 P(x)=\frac {1}{(2\pi)^{p/2}\sigma}exp(-\frac {1}{2}(x-\mu)^T\sigma^{-1}(x-\mu))\\
 x\in R^{p*1}\ \ \mu\in R^{p*1}\ \ \sigma^2\in R^{p*p} (\sigma 半正定对称)
 $$
 
 
-对$\sigma$可进行特征分解：
 
+对$\sigma$可进行特征分解：
 
 $$
 \sigma=U·\Lambda·U^T\\
