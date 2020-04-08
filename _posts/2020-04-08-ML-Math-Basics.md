@@ -272,6 +272,7 @@ $$
 
 
 其中$\Delta=Cov(x,y)$:
+
 $$
 \Delta=E[(x-\mu)(y-A\mu-b)^T]\\
 =E[(x-\mu)(Ax-A\mu+\epsilon)^T]\\
