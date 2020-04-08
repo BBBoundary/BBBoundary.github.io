@@ -82,7 +82,7 @@ $$
 
 # 概率论补充
 
-#### 高斯分布（正态分布）
+#### 1)高斯分布（正态分布）
 
 这里以线性高斯分布(Linear Gaussian Model)为例：
 
@@ -162,7 +162,7 @@ $$
 
 
 
-#### 求边缘概率及条件概率
+#### 2)求边缘概率及条件概率
 
 将样本X分为$X_a$、$X_b$两个部分：
 
@@ -186,6 +186,8 @@ X_a=(I_m,0)\begin{pmatrix}X_a\\X_b\end{pmatrix}\\
 \Rightarrow E[X_a]=(I_m,0)\begin{pmatrix}\mu_a\\\mu_b\end{pmatrix}=\mu_a\\
 Var[X_a]=(I_m,0)\begin{pmatrix}\sigma_{aa}&\sigma_{ab}\\\sigma_{ab}&\sigma_{bb}\end{pmatrix}\begin{pmatrix}I_m\\0\end{pmatrix}=\sigma_{aa}
 $$
+
+
 故
 $$
 X_a\sim N(\mu_a,\sigma_{aa})
@@ -223,6 +225,8 @@ $$
 X_b|X_a
 $$
 时$X_a$被视为已知常数，故有：
+
+
 $$
 E[X_b|X_a]=\mu_{b·a}+\sigma_{ba}\sigma_{aa}^{-1}x_a\\
 Var[X_b|X_a]=Var[X_{b·a}]=\sigma_{bb·a}\\
