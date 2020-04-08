@@ -1,6 +1,6 @@
 ---
 layout:    post   				    # 使用的布局（不需要改）
-title:    「ML Basic」Math Basics # 标题 
+title:    「Machine Learning」Math Basics # 标题 
 subtitle:  Math basics(probability and mathematical statistics) for machine learning #副标
 date:      2020-04-08 				# 时间
 author:    Culaccino					# 作者
@@ -82,7 +82,7 @@ $$
 
 # 概率论补充
 
-### 高斯分布（正态分布）
+#### 高斯分布（正态分布）
 
 这里以线性高斯分布(Linear Gaussian Model)为例：
 
@@ -159,3 +159,74 @@ $$
 $$
 P(x)=\frac {1}{(2\pi)^{p/2}\sigma}exp(-\frac {1}{2}\Delta)
 $$
+
+
+
+#### 求边缘概率及条件概率
+
+将样本X分为$X_a$、$X_b$两个部分：
+
+
+$$
+X=\begin{pmatrix}X_a\\X_b\end{pmatrix}\ \ \ \ \ X_a\in R^m\ \\
+\mu=\begin{pmatrix}\mu_a\\\mu_b\end{pmatrix}\ \ \ 
+\sigma=\begin{pmatrix}\sigma_{aa}&\sigma_{ab}\\\sigma_{ba}&\sigma_{bb}\end{pmatrix}
+$$
+
+
+求：
+$$
+P(X_a)、P(X_b|X_a)
+$$
+
+
+①求$P(X_a)$：
+$$
+X_a=(I_m,0)\begin{pmatrix}X_a\\X_b\end{pmatrix}\\
+\Rightarrow E[X_a]=(I_m,0)\begin{pmatrix}\mu_a\\\mu_b\end{pmatrix}=\mu_a\\
+Var[X_a]=(I_m,0)\begin{pmatrix}\sigma_{aa}&\sigma_{ab}\\\sigma_{ab}&\sigma_{bb}\end{pmatrix}\begin{pmatrix}I_m\\0\end{pmatrix}=\sigma_{aa}
+$$
+故
+$$
+X_a\sim N(\mu_a,\sigma_{aa})
+$$
+
+
+②求
+$$
+P(X_b|X_a):
+$$
+
+
+构造：
+
+
+$$
+X_{b·a}=X_b-\sigma_{ba}\sigma_{aa}^{-1}X_a\ \ \ ①\\
+\mu_{b·a}=\mu_b-\sigma_{ba}\sigma_{aa}^{-1}\mu_a\ \ \ \ \ ②\\
+\sigma_{bb·a}=\sigma_{bb}-\sigma_{ba}\sigma_{aa}^{-1}\sigma_{ab}\ \ ③
+$$
+
+
+则有：
+$$
+X_{b·a}=(-\sigma_{ba}\sigma_{aa}^{-1},I_m)\begin{pmatrix}X_a\\X_b\end{pmatrix}
+$$
+带入可有：
+$$
+E(X_{b·a})=\mu_{b·a}\ \ \ \ \ \ Var(X_{b·a})=\sigma_{bb·a}
+$$
+
+
+又由①得$$X_b=X_{b·a}+\sigma_{ba}\sigma_{aa}^{-1}X_a$$。因为当求
+$$
+X_b|X_a
+$$
+时$X_a$被视为已知常数，故有：
+$$
+E[X_b|X_a]=\mu_{b·a}+\sigma_{ba}\sigma_{aa}^{-1}x_a\\
+Var[X_b|X_a]=Var[X_{b·a}]=\sigma_{bb·a}\\
+\Rightarrow X_b|X_a\sim N(\mu_{b·a}+\sigma_{ba}\sigma_{aa}^{-1}x_a\ ,\ \sigma_{bb·a})
+$$
+
+
