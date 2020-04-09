@@ -107,7 +107,7 @@ E[\sigma^2_{MLE}]=E[\frac {1}{N}\sum_{i=1}^Nx_i^2-\mu_{MLE}^2]\\
 =E[\frac {1}{N}\sum_{i=1}^Nx_i^2-\mu^2]-(E[\mu_{MLE}^2]-E[\mu^2])\\
 =\frac {1}{N}\sum_{i=1}^NE[x_i^2-\mu^2]-(E[\mu_{MLE}^2]-\mu^2)\\
 =\frac {1}{N}\sum_{i=1}^NE[x_i^2-E^2[x_i]]-(E[\mu_{MLE}^2]-E^2[\mu_{MLE}])\\
-=\frac {1}{N}\sum_{i=1}^N(E[x_i^2]-E^2[x_i])-(E[\mu_{MLE}^2]-E^2[\mu_{MLE}])\\
+=\frac {1}{N}\sum_{i=1}^N(E[x_i^2]-E^2[x_i])-(Var(\mu_{MLE}))\\
 =\frac {1}{N}\sum_{i=1}^NVar(x_i)-\frac {1}{N^2}\sum_{i=1}^NVar(x_i)\\
 =\sigma^2-\frac {1}{N}\sigma^2\\
 =\frac {N-1}{N}\sigma^2
