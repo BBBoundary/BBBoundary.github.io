@@ -102,8 +102,6 @@ $$
 
 
 其中，$$\mu_{MLE}$$为无偏估计，$$\sigma^2_{MLE}$$为有偏估计：
-
-
 $$
 E[\sigma^2_{MLE}]=E[\frac {1}{N}\sum_{i=1}^Nx_i^2-\mu_{MLE}^2]\\
 =E[\frac {1}{N}\sum_{i=1}^Nx_i^2-\mu^2]-(E[\mu_{MLE}^2]-E[\mu^2])\\
@@ -127,7 +125,6 @@ $$
 
 
 对$\sigma$可进行特征分解：
-
 $$
 \sigma=U·\Lambda·U^T\\
 =(U_1,U_2……U_p)
@@ -145,8 +142,6 @@ $$
 
 
 故原式有：
-
-
 $$
 (x-\mu)^T\sigma^{-1}(s-\mu)\\
 =\sum_{i=1}^p(x-\mu)^TU_i\frac{1}{\lambda_i}U_i^T(x-\mu)\\
