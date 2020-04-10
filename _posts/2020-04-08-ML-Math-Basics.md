@@ -4,7 +4,7 @@ title:    「Machine Learning」Math Basics # 标题
 subtitle:  Math basics(probability and mathematical statistics) for machine learning #副标
 date:      2020-04-08 				# 时间
 author:    Culaccino					# 作者
-header-img: img/upd_img16.png        #这篇文章标题背景图片
+header-img: img/upd_img17.JPG        #这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签
     - Machine Learning
