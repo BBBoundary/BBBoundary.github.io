@@ -1,6 +1,6 @@
 ---
 layout:    post   				    # 使用的布局（不需要改）
-title:    「Machine Learning」Math Basics # 标题 
+title:    「Machine Learning-1」Math Basics # 标题 
 subtitle:  Math basics(probability and mathematical statistics) for machine learning #副标
 date:      2020-04-08 				# 时间
 author:    Culaccino					# 作者
