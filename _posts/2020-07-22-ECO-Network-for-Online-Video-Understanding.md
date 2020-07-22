@@ -8,8 +8,8 @@ header-img: img/upd_img7.PNG        #这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签
     - CV
-	- Action Recognition
-	- Online Video Understanding
+    - Action Recognition
+    - Online Video Understanding
     - Visual Caption
     - paper reading
 
