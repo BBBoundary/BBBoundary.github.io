@@ -97,7 +97,7 @@ service-worker: true
 friends: [
     {
         title: "Gghost",
-        href: "www.gjnghost.top"
+        href: "http://gjnghost.top"
     },{
         title: "Wenzhuan",
         href: "https://wzyxv1n.top"
