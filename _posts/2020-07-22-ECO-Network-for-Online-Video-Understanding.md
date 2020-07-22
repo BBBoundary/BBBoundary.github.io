@@ -1,6 +1,6 @@
 ---
 layout:    post   				    # 使用的布局（不需要改）
-title:    【CV-Action Recognition】ECO Network for Online Video Understanding # 标题 
+title:    「CV-Action Recognition」ECO Network for Online Video Understanding # 标题 
 subtitle:  2018_Mohammadreza Zolfaghari_ECO:Efficient Convolutional Network for Online Video Understanding  #副标题
 date:      2020-07-22 				# 时间
 author:    Culaccino					# 作者
