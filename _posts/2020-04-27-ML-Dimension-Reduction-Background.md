@@ -4,7 +4,7 @@ title:     「Machine Learning-3」Dimension Reduction Background # 标题
 subtitle:  Dimension Reduction Background for ML(PCA & PCoA) #副标
 date:      2020-04-27 				# 时间
 author:    Culaccino					# 作者
-header-img: img/upd_img17.JPG       #这篇文章标题背景图片
+header-img: img/upd_img12.jpg       #这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签
     - Machine Learning
