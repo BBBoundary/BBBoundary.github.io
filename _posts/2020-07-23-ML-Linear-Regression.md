@@ -104,7 +104,7 @@ $$
 其中L(w)是loss function，$$\lambda P(w)$$是正则化项。正则化常见有L1、L2两种形式。
 
 - L1：又称为Lasso，采用第一范式：$$P(w)=||w||$$
-- L2(即权值衰减)：又称Ridge Regression，即岭回归，采用第二范式：$$P(w)=||w||_2^2=w^Tw$$
+- L2(即权值衰减)：又称Ridge Regression，即岭回归，采用第二范式：$$P(w)=||w||_2^2=w^Tw$$
 
 #### L1 Lasso 
 
@@ -115,7 +115,6 @@ L1正则化可以引起稀疏解。从最小化损失的角度看，由于L1项�
 $$
 J(w)=L(w)+\lambda P(w)\\=\sum_{i=1}^N||w^Tx_i-y_i||^2+\lambda w^Tw\\=w^TX^TXw-2w^TX^TY+Y^TY+\lambda w^Tw\\=w^T(X^TX+\lambda I)w-2w^TX^TY+Y^TY\\\\\Rightarrow \hat w =argmax\ J(w)\\\Rightarrow \frac{\Delta J(w)}{\Delta w}=2(X^TX+\lambda I)w-2X^TY=0\\\hat w = (X^TX+\lambda I)^{-1}X^TY\\
 $$
-
 
 
 对比可见加上正则化项后w的结果比无正则化时多了一项$$\lambda I$$。由于$$X^TX$$为半正定的，而$$\lambda I$$为对角矩阵，故$$\lambda I+X^TX$$为正定矩阵，即一定是可逆的。
@@ -153,7 +152,7 @@ $$
 \hat w_{MAP}=argmin\sum_{i=1}^N(y_i-w^Tx)^2+\frac{\sigma^2}{\sigma_0^2}||w||^2\\
 \hat w_{L2}=argmin\ J(w)=argmin\sum_{i=1}^N||w^Tx_i-y_i||^2+\lambda w^Tw
 $$
-可以发现两个最后求得的w是等价的，说明Reqularized LSE（正则化的LSE）是等价于MAP（noise&prior为Gaussian Dist）的。只不过贝叶斯派是基于其学派理论，借助先验概率和实验结果(即似然)来得到后验概率，通过改变w使得后验概率尽可能最大；而频率派的正则化法是在最小二乘法的基础上加上了一项正则化项得到此时，在前面我们也证明了最小二乘法是等价于Gaussian MLE（$$\epsilon \sim N$$）的，即最小二乘法符合频率派的观点。
+可以发现两个最后求得的w是等价的，说明Reqularized LSE（正则化的LSE）是等价于MAP（noise&prior为Gaussian Dist）的。只不过贝叶斯派是基于其学派理论，借助先验概率和实验结果(即似然)来得到后验概率，通过改变w使得后验概率尽可能最大；而频率派的正则化法是在最小二乘法的基础上加上了一项正则化项得到此时，在前面我们也证明了最小二乘法是等价于Gaussian MLE（$$\epsilon \sim N$$）的，即最小二乘法符合频率派的观点。
 
 
 
