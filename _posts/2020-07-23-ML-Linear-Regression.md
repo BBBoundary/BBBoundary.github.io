@@ -1,7 +1,7 @@
 ---
 layout:    post   				    # 使用的布局（不需要改）
 title:     「Machine Learning-2」Linear Regression # 标题 
-subtitle:  Linear Regression from the perspective of Frequentist&Bayesians #副标
+subtitle:  Linear Regression from the perspective of Frequentist & Bayesians #副标
 date:      2020-07-23 				# 时间
 author:    Culaccino					# 作者
 header-img: img/upd_img12.jpg      #这篇文章标题背景图片
