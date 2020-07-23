@@ -50,9 +50,9 @@ tags:								#标签
 为了解决局部处理方法下无法掌握全局时间信息的问题，一般方法有以下几种
 
 - 大部分2stream类方法和所有3D卷积类型的方法都是在学习短视程的时序信息，及输入一个连续的video clip，输出一个分类结果。在video-level上，通常是对video中选取多个clip分别得到分类结果，在进行平均得到最后的分类结果，这样会带来比较大的计算开销。
-- increase temporal resolution of sliding window，加长每个局部时域的长度，但计算量快速增大，且仍无法覆盖整个视频的信息
+- increase temporal resolution of sliding window，加长每个局部时域的长度，但计算量快速增大，且仍无法覆盖整个视频的信息
 - encoding methods，通过对每一帧进行独立编码得到对视频的representation，再将所有帧的信息按时间序列平均融合。这种方法忽视了帧与帧之间的关联，即忽视了时间维度的信息，也忽视了冗余的问题。
-- 与ECO最相似的是目前被广泛使用的TSN网络。【相似点】两者都是从video中均匀采样固定数量的视频帧，从而来覆盖长时程的时序结构，两者都是end2end训练的。【不同点】TSN中直接用late-fusion的方式对每个segment的结果做融合，而ECO中则是进行了feature map层面的融合（2D卷积->3D卷积）。此外ECO的速度要远远快于TSN。
+- 与ECO最相似的是目前被广泛使用的TSN网络。【相似点】两者都是从video中均匀采样固定数量的视频帧，从而来覆盖长时程的时序结构，两者都是end2end训练的。【不同点】TSN中直接用late-fusion的方式对每个segment的结果做融合，而ECO中则是进行了feature map层面的融合（2D卷积->3D卷积）。此外ECO的速度要远远快于TSN。
 
 #### ③Video Caption
 
@@ -71,7 +71,7 @@ tags:								#标签
 2D Net采用BN-Inception（Inception-3c layer），3D Net采用3D-Resnet18中的部分层。
 
 1. 分区。将原视频等长分为N个段，$S_i, i=1,2,……N$。ps.当然此处作者想通过更聪明的划区手段，但需要对帧进行预处理，即需要额外的开销。而实际上效果提升不大，即性价比不高。
-2. 对每个分区随机抽取一帧（即共N帧），放到2D Net中处理得到96个$28*28$大小的feature map，堆叠后可得到$N*28*28*96$大小特征的volume。
+2. 对每个分区随机抽取一帧（即共N帧），放到2D Net中处理得到96个$$28*28$$大小的feature map，堆叠后可得到$$N*28*28*96$$大小特征的volume。
 3. 对于得到的特征volume，采用一个3D Net进行处理，直接输出对应动作类别数目的一维向量。
 
 #### ECO FULL
