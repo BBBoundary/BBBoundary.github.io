@@ -117,7 +117,7 @@ $$||w||_1=C$$
 的切点，因此更容易相切在坐标轴上。
 
 #### L2 Ridge Regression
-
+在最小二乘误差的基础上添加一个正则化项：
 $$
 J(w)=L(w)+\lambda P(w)\\=\sum_{i=1}^N||w^Tx_i-y_i||^2+\lambda w^Tw\\=w^TX^TXw-2w^TX^TY+Y^TY+\lambda w^Tw\\=w^T(X^TX+\lambda I)w-2w^TX^TY+Y^TY\\\\\Rightarrow \hat w =argmax\ J(w)\\\Rightarrow \frac{\Delta J(w)}{\Delta w}=2(X^TX+\lambda I)w-2X^TY=0\\\hat w = (X^TX+\lambda I)^{-1}X^TY\\
 $$
@@ -158,6 +158,7 @@ $$
 \hat w_{MAP}=argmin\sum_{i=1}^N(y_i-w^Tx)^2+\frac{\sigma^2}{\sigma_0^2}||w||^2\\
 \hat w_{L2}=argmin\ J(w)=argmin\sum_{i=1}^N||w^Tx_i-y_i||^2+\lambda w^Tw
 $$
+
 可以发现两个最后求得的w是等价的，说明Reqularized LSE（正则化的LSE）是等价于MAP（noise&prior为Gaussian Dist）的。只不过贝叶斯派是基于其学派理论，借助先验概率和实验结果(即似然)来得到后验概率，通过改变w使得后验概率尽可能最大；而频率派的正则化法是在最小二乘法的基础上加上了一项正则化项得到此时，在前面我们也证明了最小二乘法是等价于Gaussian MLE（$$\epsilon \sim N$$）的，即最小二乘法符合频率派的观点。
 
 
