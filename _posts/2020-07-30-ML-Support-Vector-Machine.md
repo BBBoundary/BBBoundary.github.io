@@ -208,7 +208,7 @@ $$
      
      这个式子就是内积的形式，Hilbert空间满足线性，于是正定性得证。
 
-  2. $$\Leftarrow$$：对于K进行分解，对于对称矩阵$$K=V\Lambda V^T$$，那么令$$\phi(x_i)=\sqrt(\lambda_i)V_i$$，其中$$V_i$$是特征向量，于是就构造了$$k(x,z)=\sqrt(\lambda_i \lambda_j)V_i^TV_j$$
+  2. $$\Leftarrow$$：对于K进行分解，对于对称矩阵$$K=V\Lambda V^T$$，那么令$$\phi(x_i)=\sqrt(\lambda_i)V_i$$，其中$$V_i$$是特征向量，于是就构造了$$k(x,z)=\sqrt{(\lambda_i \lambda_j)}V_i^TV_j$$
 
 
 
