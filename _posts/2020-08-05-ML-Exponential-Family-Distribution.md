@@ -101,7 +101,9 @@ $$
 
 ### Log partition Function性质
 
-对于概率密度函数：$$p(x|\eta)=\frac{1}{exp(A(\eta))}h(x)exp(\eta^T\phi(x))$$，对其归一性质，我们队两边进行积分，可得到：
+对于概率密度函数：
+$$p(x|\eta)=\frac{1}{exp(A(\eta))}h(x)exp(\eta^T\phi(x))$$
+，对其归一性质，我们队两边进行积分，可得到：
 
 
 $$
