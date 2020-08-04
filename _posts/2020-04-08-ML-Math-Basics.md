@@ -8,7 +8,6 @@ header-img: img/upd_img12.jpg        #这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签
     - Machine Learning
-    - Probability theory
 ---
 
 这里是机器学习基础知识总结的开篇，是ML及相关领域所必要的数学基础部分（主要是概率论）。
