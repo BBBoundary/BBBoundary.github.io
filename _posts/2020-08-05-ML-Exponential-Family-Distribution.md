@@ -19,7 +19,7 @@ p(x|\eta)=h(x)exp(\eta^T\phi(x)-A(\eta))
 $$
 
 
-其中$$\eta$$为（规范化）参数，一般为向量形式$$\in R^p$$；$$A(\eta)$$为对数分配函数（log partition function），可见$$A(\eta)=log\ z$$，所以$$$A(\eta)$$被称为对数分配函数：
+其中$$\eta$$为（规范化）参数，一般为向量形式$$\in R^p$$；$$A(\eta)$$为对数分配函数（log partition function），可见$$A(\eta)=log\ z$$，所以$$A(\eta)$$被称为对数分配函数：
 
 $$
 p(x|\eta)=\frac{1}{exp(A(\eta))}h(x)exp(\eta^T\phi(x))=\frac{1}{z（归一化因子）}\hat p(x|\eta)
@@ -126,7 +126,8 @@ $$
 
 对于独立同分布采样的样本集合：$$D=\{x_1,x_2……,x_N\}$$，我们通过MLE计算参数：
 $$
-\mu_{MLE}=argmax\ \sum_{i=1}^Nlog\ p(x_i|y)\\=argmax\ \sum_{i=1}^Nlog[h(x_i)exp(\eta^T\phi(x_i)-A(\eta))]\\
+\mu_{MLE}=argmax\ \sum_{i=1}^Nlog\ p(x_i|y)\\
+=argmax \sum_{i=1}^Nlog[h(x_i)exp(\eta^T\phi(x_i)-A(\eta))]\\
 =argmax \sum_{i=1}^N[log\ h(x_i)+\eta^T\phi(x_i)-A(\eta)]\\
 \Rightarrow argmax\ \sum_{i=1}^N[\eta^T\phi(x_i)-A(\eta)]
 $$
@@ -222,7 +223,7 @@ $$
 $$
 \Rightarrow p(x)=exp(\lambda_0+\lambda^Tf(x)-1)\\
 =exp(\lambda^Tf(x)-(1-\lambda_0))\\
-\Rightarrow \begin{cases}\eta^T=\lambda^T\\\phi(x)=f(x)\\A(\eta)=1-\lambda_0 \end{cases}
+\Rightarrow \begin{cases}\eta^T=\lambda^T\\ \phi(x)=f(x)\\ A(\eta)=1-\lambda_0 \end{cases}
 $$
 
 
