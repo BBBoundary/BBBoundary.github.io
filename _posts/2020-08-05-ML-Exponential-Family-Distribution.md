@@ -19,7 +19,7 @@ p(x|\eta)=h(x)exp(\eta^T\phi(x)-A(\eta))
 $$
 
 
-其中$$\eta$$为（规范化）参数，一般为向量形式$$\in R^p$$；$$A(\eta)$$为对数分配函数（log partition function），可见$$A(\eta)=log\ z$$，所以$$A(\eta)$$被称为对数分配函数：
+其中$$\eta$$为（规范化）参数，一般为向量形式$$\in R^p$$；$$A(\eta)$$为对数分配函数（log partition function），可见$$A(\eta)=log\ z$$，所以$$A(\eta)$$被称为对数分配函数：
 
 $$
 p(x|\eta)=\frac{1}{exp(A(\eta))}h(x)exp(\eta^T\phi(x))=\frac{1}{z}\hat p(x|\eta) \ \ \ \ z为归一化因子
