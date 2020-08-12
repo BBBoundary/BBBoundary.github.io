@@ -97,13 +97,15 @@ SAAT部分有两个任务：①通过前置操作得到的场景表示（Vb'）�
 $$
 主语s解码以场景表示V^{b'}和全局特征V^{r'}为指导：\\
 s=arg\,\max_{w\in vocab}p_\theta(w|V^{b'},V^r)\\
-p_{\theta}(w|V^{b'},V^r)=softmax(w_s^Tf_{att}(V^{r'},V^{b'},V^{b'}))\\=softmax(w_s^Tsoftmax(\frac{V^{r'}V^{b'T}V^{b'}}{\sqrt{d_k}}))\\
+p_{\theta}(w|V^{b'},V^r)=softmax(w_s^Tf_{att}(V^{r'},V^{b'},V^{b'}))\\
+=softmax(w_s^Tsoftmax(\frac{V^{r'}V^{b'T}V^{b'}}{\sqrt{d_k}}))\\
 动作谓语a解码以主语s和时序动态特征V^{m'}作为指导:\\
 a=arg\,\max_{w\in vocab}p_\theta(w|s,V^{m'})\\
 p_{\theta}(w|s,V^{m'})=softmax(w_a^TReLU([E_s;V^{m'}]))\\
 宾语o解码以谓语a和全局特征V^{b'}为指导：\\
 o=arg\,\max_{w\in vocab}p_\theta(w|a,V^{b'})\\
-p_{\theta}(w|V^{b'},V^r)=softmax(w_s^Tf_{att}(E^o,V^{b'},V^{b'}))\\=softmax(w_s^Tsoftmax(\frac{E_oV^{b'T}V^{b'}}{\sqrt{d_k}}))\ \ ，其中E表示对下标单词的embedding
+p_{\theta}(w|V^{b'},V^r)=softmax(w_s^Tf_{att}(E^o,V^{b'},V^{b'}))\\
+=softmax(w_s^Tsoftmax(\frac{E_oV^{b'T}V^{b'}}{\sqrt{d_k}}))\ \ ，其中E表示对下标单词的embedding
 $$
 
 
