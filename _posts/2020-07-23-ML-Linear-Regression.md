@@ -29,8 +29,7 @@ $$
 $$
 
 
-我们采用二范数定义的平方误差来定义损失函数：
-$
+我们采用二范数定义的平方误差来定义损失函数：$
 L(w)=\sum_{i=1}^N||w^Tx_i-y_i||_2^2\\
 =[w^T(x_1,x_2,……x_N)-(y_1,y_2,……y_N)][w^T(x_1,x_2,……x_N)-(y_1,y_2,……y_N)]^T\\
 =(w^TX-Y^T)(Xw-Y)\\
@@ -48,7 +47,7 @@ $
 
 其中$(X^TX)^{-1}X^T$记为伪逆$X^+$，对于行满秩或列满秩的X，可以直接求解；而对于非满秩的样本集合，需要使用奇异值分解（SVD）的方法，对X求奇异值分解，得到$$X=U\Sigma V^T$$，于是也有$X^+=V\Sigma^{-1}U^T$。
 
-在几何上，我们令$$f(w)=x\beta$$，由于$$X\in R^{N*p}$$相当于是在一个p维超平面中的N个向量。当Y恰好在这个p维超平面上时L(w)为0；当其不在这个超平面上时，由向量Y向超平面做投影，投影向量即为$X\beta$，差向量即为$$Y-X\beta$$。由该差向量与p维空间中的向量全部垂直可得到
+在几何上，我们令$f(w)=x\beta$，由于$X\in R^{N*p}$相当于是在一个p维超平面中的N个向量。当Y恰好在这个p维超平面上时L(w)为0；当其不在这个超平面上时，由向量Y向超平面做投影，投影向量即为$X\beta$，差向量即为$Y-X\beta$。由该差向量与p维空间中的向量全部垂直可得到
 $
 X^T(Y-X\beta)=0\in R^{p*1}\\
 \Rightarrow X^TY=X^TX\beta\\
@@ -56,24 +55,27 @@ X^T(Y-X\beta)=0\in R^{p*1}\\
 $
 
 
-可以看到两种解释下$$w$$与$$\beta$$的解是一样的，其中$Xw-Y$与$Y-X\beta$的结构也是相同的。这也是用第二范式定义最小二乘法时，真实量Y与拟合量f(w)之间的差的代数意义和几何意义。
+可以看到两种解释下$w$与$\beta$的解是一样的，其中$Xw-Y$与$Y-X\beta$的结构也是相同的。这也是用第二范式定义最小二乘法时，真实量Y与拟合量f(w)之间的差的代数意义和几何意义。
 
 
 
 ### LSE-probabilistic perspective 概率视角
 
-设数据在f(w)的基础上有噪声：$\epsilon \sim N(0,\sigma^2)$，即有$y=f(w)+\epsilon$，可以得到$y|x;w \sim N(w^Tx,\sigma^2)$
+设数据在f(w)的基础上有噪声：$\epsilon \sim N(0,\sigma^2)$，即有$y=f(w)+\epsilon$，可以得到
+
+$$y|x;w \sim N(w^Tx,\sigma^2)$$
 
 
 则有最大似然估计MLE：
-$
+
+$$
 L(w)=log P(Y|X;w)=log\prod_{i=1}^N(y_i|x_i;w)\\
 =\sum_{i=1}^N[log\frac{1}{\sqrt{2\pi}\sigma}-\frac{(y_i-w^Tx_i)^2}{2\sigma^2}]\\
 \\
 \hat w = argmax\ L(w)\\
 =argmax\ \sum_{i=1}^N-\frac{1}{2\sigma^2}(y_i-w^Tx_i)^2\\
 =argmin\ \sum_{i=1}^N(y_i-w^Tx_i)^2\\
-$
+$$
 
 
 可以得到，通过MLE进行优化的方式与定义的最小二乘法相同，表示当通过设噪声服从去中心化的正态分布时，概率视角的MLE是与最小二乘法等价的。
@@ -93,8 +95,8 @@ $$
 
 其中L(w)是loss function，$\lambda P(w)$是正则化项。正则化常见有L1、L2两种形式。
 
-- L1：又称为Lasso，采用第一范式：$P(w)=||w||$
-- L2(即权值衰减)：又称Ridge Regression，即岭回归，采用第二范式：$P(w)=||w||_2^2=w^Tw$
+- L1：又称为Lasso，采用第一范式：$$P(w)=||w||$$
+- L2(即权值衰减)：又称Ridge Regression，即岭回归，采用第二范式： $$P(w)=||w||_2^2=w^Tw$$
 
 #### L1 Lasso 
 
@@ -119,7 +121,11 @@ $$
 
 ### Regularization-Bayesians 正则化（贝叶斯派）
 
-按照贝叶斯派的理论，假设有先验$w\sim N(0,\sigma_0^2)$，则有后验概率：$P(w|y)=\frac {P(y|w)P(w)}{P(y)}$，其中P(y)是固定的，而似然P(y|w）根据高斯分布(其噪声为上述我们假设的去中心化的高斯分布)有
+按照贝叶斯派的理论，假设有先验$w\sim N(0,\sigma_0^2)$，则有后验概率：
+
+$$P(w|y)=\frac {P(y|w)P(w)}{P(y)}$$，
+
+其中P(y)是固定的，而似然P(y|w）根据高斯分布(其噪声为上述我们假设的去中心化的高斯分布)有
 
 $$
 P(y|w)=\frac {1}{\sqrt{2\pi}\sigma}exp(-\frac{(y_i-w^Tx)^2}{2\sigma^2})
@@ -127,20 +133,22 @@ $$
 
 
 则有最大后验概率MAP：
-$
+
+$$
 \hat w = argmax\ P(w|y)\\
 =argmax\ P(y|w)P(w)\\
 \Rightarrow argmax\ log(\frac{1}{\sqrt{2\pi}\sigma}\frac{1}{\sqrt{2\pi}\sigma_0})+\sum_{i=1}^Nlog\ exp(-\frac{(y_i-w^Tx)^2}{2\sigma^2}-\frac{||w||^2}{2\sigma_0^2})\\
 =argmin\sum_{i=1}^N(\frac{(y_i-w^Tx)^2}{2\sigma^2}+\frac{||w||^2}{2\sigma_0^2})\\
 =argmin\sum_{i=1}^N(y_i-w^Tx)^2+\frac{\sigma^2}{\sigma_0^2}||w||^2
-$
+$$
 
 
 将贝叶斯角度求得的w与频率派求得的w进行对比有：
-$
+
+$$
 \hat w_{MAP}=argmin\sum_{i=1}^N(y_i-w^Tx)^2+\frac{\sigma^2}{\sigma_0^2}||w||^2\\
 \hat w_{L2}=argmin\ J(w)=argmin\sum_{i=1}^N||w^Tx_i-y_i||^2+\lambda w^Tw
-$
+$$
 
 可以发现两个最后求得的w是等价的，说明Reqularized LSE（正则化的LSE）是等价于MAP（noise&prior为Gaussian Dist）的。只不过贝叶斯派是基于其学派理论，借助先验概率和实验结果(即似然)来得到后验概率，通过改变w使得后验概率尽可能最大；而频率派的正则化法是在最小二乘法的基础上加上了一项正则化项得到此时，在前面我们也证明了最小二乘法是等价于Gaussian MLE（$$\epsilon \sim N$$）的，即最小二乘法符合频率派的观点。
 
