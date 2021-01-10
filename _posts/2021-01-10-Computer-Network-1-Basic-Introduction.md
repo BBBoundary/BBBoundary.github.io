@@ -8,7 +8,7 @@ header-img: img/upd_img10.png       #这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签
     - 专业课
-	- Computer Networking
+    - Computer Networking
 ---
 
 2020-2021(1)学期的计网期末考试专用，知识点的梳理会根据我自己的学习体会、思维方式来安排，毕竟是非常重要的一门专业课，但应该也不会写到考研的要求。接下来的复习阶段应该会日更博客了（关于计网、操作系统、马原、软工这几门）。
