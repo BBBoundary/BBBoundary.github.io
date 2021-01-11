@@ -1,7 +1,7 @@
 ---
 layout:    post   				    # 使用的布局（不需要改）
 title:     「Computer Network-3」Data Link Layer & LANs # 标题 
-subtitle:  Embodiment of the basic principles of physics in the design of physical layer #副标
+subtitle:  The bridge between physical realization and logic #副标
 date:      2021-01-11 				# 时间
 author:    Culaccino					# 作者
 header-img: img/upd_img10.png       #这篇文章标题背景图片
