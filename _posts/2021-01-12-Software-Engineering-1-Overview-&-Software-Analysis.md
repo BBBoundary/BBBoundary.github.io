@@ -1,7 +1,7 @@
 ---
 layout:    post   				    # 使用的布局（不需要改）
 title:     「Software Engineering-1」Overview & Software Analysis # 标题 
-subtitle:  Comprehensive analysis contributes to rational software development #副标
+subtitle:  Comprehensive analysis contributes to efficient software development #副标
 date:      2021-01-12 				# 时间
 author:    Culaccino					# 作者
 header-img: img/upd_img10.png       #这篇文章标题背景图片
