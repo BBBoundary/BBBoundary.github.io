@@ -8,7 +8,7 @@ header-img: img/upd_img10.png       #这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签
     - 专业课
-    - Software Engineering
+- Software Engineering
 ---
 
 **软件开发**阶段分为「软件设计」和「软件实现」两个部分，其中**设计**又能细分为总体设计&详细设计两部分，**实现**可以分为编码、单元测试、综合测试。开发阶段是软件生命周期中的重头，是迭代过程中主要的实践部分，也是技术与管理互相协作配合体现最多的部分。
@@ -125,14 +125,14 @@ tags:								#标签
 
 - 基本符号
 
-  <img src="http://imagebed.wzby.top/images/2021/01/12/image73325030139d4b6a.md.png" style="zoom:85%;" />
+  <img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmm9vp7284j30t20h8108.jpg" style="zoom:67%;" />
 
 #### 判定表
 
 实质上是n*m的全列举方法。当算法中包含多重嵌套时，可以将状态转移清晰地表示出来。但当数据元素的值变多时，其简洁程度也会下降。
 **【结构】** 左上：所有条件；左下：所有可能做的动作；右上：（与左上）各种条件组合的一个矩阵；右下：（与左下）每种条件组合对应的动作。示例如下：
 
-<img src="http://imagebed.wzby.top/images/2021/01/12/3801213fb80e7becedc68a6c252eb9389b506b1b.jpg" style="zoom:75%;" />
+<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmm9wii472j30fk0hyter.jpg" style="zoom:50%;" />
 
 
 
@@ -140,7 +140,7 @@ tags:								#标签
 
 判定表的变种，易懂。示例如下：
 
-<img src="http://imagebed.wzby.top/images/2021/01/12/image6d64dea9a5b8f865.md.png" style="zoom:90%;" />
+<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmm9wv1dzhj30tq0ewn4g.jpg" style="zoom:50%;" />
 
 
 
@@ -160,7 +160,7 @@ tags:								#标签
 
 #### Jackson方法
 
-<img src="http://imagebed.wzby.top/images/2021/01/12/imagecb4246000334f541.md.png" style="zoom:75%;" />
+<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmm9vmnji3j30sk0t87e8.jpg" style="zoom:50%;" />
 
 - (a) 顺序结构，A由BCD组成，顺序为BCD
 - (b)选择结构，A由BCD之一构成
