@@ -49,7 +49,7 @@ tags:								#标签
 - 公共：若一组模块都访问同一个公共数据环境，则他们之间的耦合就称为公共耦合；
 - 内容：如果出现以下情况之一则为内容耦合：①一个模块访问另一个模块的内部数据 ②一个模块不通过正常入口而转到另一个模块的内部 ③两个模块有一部分程序代码重叠（只可能发生在汇编程序中）④一个模块有多个入口（即有几种功能）
 
-<img src="https://p.ananas.chaoxing.com/star3/750_1024/f4c6db88022f0c126e5beaa0aabc5d26.jpg" alt="img" style="zoom:90%;" />
+<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmmaark2n7j31120lo0uv.jpg" alt="img" style="zoom:90%;" />
 
 **内聚：一个模块内各个元素彼此结合的紧密程度（局部化程度）**
 
