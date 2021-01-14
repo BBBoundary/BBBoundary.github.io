@@ -1,150 +1,17 @@
+---
+layout: null
+---
 {
 	"code" : 0 ,
 	"data" : [
-	 
+	 {% for post in site.posts %}
 	{
-		"title" : "「杂谈」End and Beginning",
-		"url" : "/2020/03/04/End-and-Beginning/"
+		"title" : "{{ post.title }} - {% for tag in post.tags %}{% if forloop.rindex != 1 %}{{ tag }}_{% else %}{{ tag }}{% endif %}{% endfor %}",
+		"url" : "{{ post.url }}"
 	}
+	{% if forloop.rindex != 1  %}
 	,
-	
-	{
-		"title" : "「CV-Visual Caption」CAM-RNN Model Summarize",
-		"url" : "/2020/03/05/CV-CAM-RNN/"
-	}
-	,
-    
-	{
-		"title" : "「CV-Visual Caption」Grounded-Description Model",
-		"url" : "/2020/03/07/CV-Grounded-Description-Model/"
-	}
-	,
-    
-	{
-		"title" : "「ACM-XCPC」2020-UPC新生赛题解",
-		"url" : "/2020/03/08/ACM-UPC-Solution/"
-	}
-	,
-    
-	{
-		"title" : "「Major Related」数据库系统原理错题集",
-		"url" : "/2020/03/09/DataBaseSystem/"
-	}
-	,
-    
-	{
-		"title" : "「CV-Visual Caption」MARN Model Explanation",
-		"url" : "/2020/03/10/CV-MARN/"
-	}
-	,
-    
-	{
-		"title" : "「NLP-Text Summarization」Key Information Guide Model",
-		"url" : "/2020/03/11/NLP-KIGN/"
-	}
-	,
-    
-	{
-		"title" : "「ACM-XCPC」Codeforces-Collection for March,2020",
-		"url" : "/2020/03/14/Codeforces-Collection-March/"
-	}
-	,
-    
-	{
-		"title" : "「ACM-XCPC」2020-学军信友邀请赛",
-		"url" : "/2020/04/05/ACM-2020-Xuejun/"
-	}	
-	,
-    
-	{
-		"title" : "「Machine Learning」Math Basics",
-		"url" : "/2020/04/08/ML-Math-Basics/"
-	}
-		
-	,
-    
-	{
-		"title" : "超星-幸福心理学答案",
-		"url" : "/2020/04/22/Course-Psychology-solution/"
-	}
-	,
-    
-	{
-		"title" : "「Machine Learning-3」Dimension Reduction Background",
-		"url" : "/2020/04/27/ML-Dimension-Reduction-Background/"
-	}
-	,
-    
-	{
-		"title" : "2019-2020(2)毛概期末复习提纲",
-		"url" : "/2020/06/28/Mao_2019-2020(2)/"
-	}
-	,
-    
-	{
-		"title" : "「CV-Action Recognition」ECO Network for Online Video Understanding",
-		"url" : "/2020/07/22/ECO-Network-for-Online-Video-Understanding/"
-	}
-	,
-    
-	{
-		"title" : "「Machine Learning-2」Linear Regression",
-		"url" : "/2020/07/23/ML-Linear-Regression/"
-	}
-	,
-    
-	{
-		"title" : "「Machine Learning-4」Support Vector Machine",
-		"url" : "/2020/07/30/ML-Support-Vector-Machine/"
-	}
-	,
-    
-	{
-		"title" : "「Machine Learning-5」Exponential Family Distribution",
-		"url" : "/2020/08/05/ML-Exponential-Family-Distribution/"
-	}
-	,
-    
-	{
-		"title" : "「CV-Visual Caption」Syntax-Aware Action Targetting Model",
-		"url" : "/2020/08/12/CV-Syntax-Aware-Action-Targetting-Model/"
-	}
-	,
-    
-	{
-		"title" : "野暮",
-		"url" : "/2020/08/29/Sunset/"
-	}
-	,
-    
-	{
-		"title" : "「Computer Network-1」Basic Introduction",
-		"url" : "/2021/01/10/Computer-Network-1-Basic-Introduction/"
-	}
-	,
-    
-	{
-		"title" : "「Computer Network-2」Physical Layer",
-		"url" : "/2021/01/10/Computer-Network-2-Physical-Layer/"
-	}
-	,
-    
-	{
-		"title" : "「Computer Network-3」Data Link Layer & LANs",
-		"url" : "/2021/01/11/Computer-Network-3-Data-Link-Layer/"
-	}
-	,
-    
-	{
-		"title" : "「Software Engineering-1」Overview & Software Analysis",
-		"url" : "/2021/01/12/Software-Engineering-1-Overview-&-Software-Analysis/"
-	}
-	,
-    
-	{
-		"title" : "「Software Engineering-2」Software Design & Realization",
-		"url" : "/2021/01/13/Software-Engineering-2-Software-Design-&-Realization/"
-	}
-    
+	{% endif %}
+    {% endfor %}
 	]
 }
