@@ -112,11 +112,6 @@ ACM国际大学生程序设计竞赛（International Collegiate Programming Cont
 20年最喜欢的曲子应该是**《Everything’s  Alright》by  塞壬唱片-MSR/DJ Okawari**，是明日方舟（目前玩的最多的手游）给这一届高考生的礼物。是一首非常平淡轻松的曲子，甚至说没通过旋律本身传达出作者碗叔的什么感情，但就是治愈了无数个夜晚中的我。
 
 
-
-#### Art
-
-
-
 #### Art
 
 呜呜呜呜呜呜我也想成为画触qwqqqq
