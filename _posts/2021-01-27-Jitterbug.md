@@ -77,7 +77,7 @@ ACM国际大学生程序设计竞赛（International Collegiate Programming Cont
 
 
 
-### Major - Computer Science and Technology
+### Major - CS
 
 呜呜其实我真的不是很想写专业课这一块，一是因为HDU的氛围和节奏真的不适合我个人静下心来做一些深入的学术研究；二是老师授课水平差距悬殊，尤其是大二下以后，我怎么感觉自己选的好多都是雷啊（捂脸），虽然从大一开始所有专业课基本也是自己自学，但说实话老师的影响还是很大的qwq（就比如说你课上不好那能不能事情少一点啊ballball了）。
 
