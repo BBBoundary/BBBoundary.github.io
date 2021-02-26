@@ -1,6 +1,6 @@
 ---
 layout:    post   				    # 使用的布局（不需要改）
-title:     「Operating System」Review（Updated)   # 标题
+title:     「Operating System」Review（Updated）   # 标题
 subtitle:  面向找实习整理的OS关键知识点，元宵节快乐~  #副标题
 date:      2021-02-26 				# 时间
 author:    Culaccino					# 作者
