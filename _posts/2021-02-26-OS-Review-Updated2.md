@@ -1,17 +1,18 @@
 ---
 layout:    post   				    # 使用的布局（不需要改）
-title:     「Operating System」Review（Updated） # 标题 
-subtitle:  面向找实习整理的OS关键知识点，元宵节快乐~ #副标
+title:     「Operating System」Review（Updated   # 标题
+subtitle:  面向找实习整理的OS关键知识点，元宵节快乐~  #副标题
 date:      2021-02-26 				# 时间
 author:    Culaccino					# 作者
-header-img: img/upd_img10.png       #这篇文章标题背景图片
+header-img: img/upd_img10.png        #这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签
+    - OS
     - 专业课
-- OS
 
 
 ---
+
 
 # OS：一、概述
 
