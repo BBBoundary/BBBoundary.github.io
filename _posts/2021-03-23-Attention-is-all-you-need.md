@@ -1,7 +1,7 @@
 ---
 layout:    post   				    # 使用的布局（不需要改） 
 title:    「CV-Mechanism」Attention is all you need ?    # 标题 
-subtitle:  Exploring the truth of Attention in Computer Vision  #副标题
+subtitle:  Exploring the essence of Attention in Computer Vision  #副标题
 date:      2021-03-23 				# 时间
 author:    Culaccino					# 作者
 header-img: img/upd_img26.JPG        #这篇文章标题背景图片
