@@ -16,11 +16,12 @@ tags:								#标签
 
 #### 1.4 猫和老鼠
 
-[题目链接](https://leetcode-cn.com/problems/cat-and-mouse/)|[代码链接](https://github.com/BBBoundary/ACM-XCPC_Wsystem9350/blob/master/LeetCode/Season%231/1.4%20%E7%8C%AB%E5%92%8C%E8%80%81%E9%BC%A0.cpp)
+[题目链接](https://leetcode-cn.com/problems/cat-and-mouse/)
+[代码链接](https://github.com/BBBoundary/ACM-XCPC_Wsystem9350/blob/master/LeetCode/Season%231/1.4%20%E7%8C%AB%E5%92%8C%E8%80%81%E9%BC%A0.cpp)
 
 记忆化DFS。
 
-<u>**【比赛结束条件】** **平局**:轮数>=2n；**老鼠赢**:老鼠的位置为0；**猫赢**:猫的位置==老鼠的位置。</u>
+**【比赛结束条件】** **平局**:轮数>=2n；**老鼠赢**:老鼠的位置为0；**猫赢**:猫的位置==老鼠的位置。
 
 老鼠赢/猫赢非常好理解；至于为什么轮数>=2n时为平局（陷入僵局），非常巧妙：
 
