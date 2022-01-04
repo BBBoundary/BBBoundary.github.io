@@ -8,7 +8,7 @@ header-img: img/upd_img28.jpg        #这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签
     - 题解
-	- LeetCode
+    - LeetCode
 
 ---
 
