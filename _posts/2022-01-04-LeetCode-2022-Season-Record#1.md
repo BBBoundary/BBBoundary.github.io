@@ -1,6 +1,6 @@
 ---
 layout:    post   				    # 使用的布局（不需要改）
-title:    【LeetCode】2022 Season Record#1 (Updating) # 标题 
+title:    「LeetCode」2022 Season Record#1  # 标题 
 subtitle:  复健哩复健哩，每日至少一题|这里会放一些好题的做题思路记录 #副标
 date:      2022-01-04 				# 时间
 author:    Culaccino					# 作者
